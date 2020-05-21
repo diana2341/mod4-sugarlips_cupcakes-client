@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// testing
+import Profile from './components/Profile'
+
+class App extends Component {
+
+  state = {
+    currentUser: {
+      firstName: "Uriel",
+      lastName: "Rodriguez",
+      address1: "39 Momar Drive",
+      address2: "private home",
+      city: "Bergenfield",
+      state: "NJ",
+      zipcode: "07621",
+      phoneNumber: "347-264-0904",
+      creditCard: "345465788909"
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Profile 
+          currentUser={this.state.currentUser} />
+      </div>
+    )
+  }
 }
 
 export default App;
+  
