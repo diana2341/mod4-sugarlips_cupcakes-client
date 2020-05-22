@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
+import Search from './Search'
+import Sort from './Sort'
 
 const Navbar = () => {
-    return (
-        <div className="container">
-    <header>
+  return (
+    <div className="container">
+        <header>
       <div className="logo">
         <a ><Link to="/cupcakes">Sugar Lipss</Link> </a>
       </div>
@@ -19,8 +20,10 @@ const Navbar = () => {
         </ul>
       </nav>
     </header>
+      <Search />
+      <Sort />
     </div>
-    )
+  )
 }
 
 export default Navbar;
