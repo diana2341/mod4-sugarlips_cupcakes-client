@@ -8,11 +8,12 @@ const Profile = props => {
       <div>
         <h1>Profile Page</h1>
         <h2>{firstName} {lastName}</h2>
-        <h3>Address: </h3>
+        <h3>Address</h3>
         {address1} <br />
         {address2} <br />
         {city}, {state} {zipcode}
-        <h3>Phone number: </h3>
+
+        <h3>Contact Information</h3>
         {phoneNumber}
 
         <h3>Payment Information</h3>
