@@ -256,7 +256,7 @@ const Form = props => {
           <option name="state" value="WY">WY</option>
         </select><br />   
       </div>
-    <button class="submit">SIGN UP</button>
+    <button className="submit">SIGN UP</button>
 
       <div class="login">
       <label id="login" for="login"><p> Already a member! <span> Login </span></p></label> 

@@ -221,7 +221,7 @@ body{
 /*   background-color: #fbc2eb; */
   
 
-  background-image: linear-gradient( 135deg, #fbc2eb 10%, #FF52E5 100%);
+  background-image: linear-gradient( 135deg, #FDCFCF 10%, rgb(243, 176, 176) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 font-family: 'Comfortaa', cursive;
@@ -236,7 +236,7 @@ font-family: 'Comfortaa', cursive;
 }
 
 .card {
-  width: 700px;
+  width: 900px;
   height: 400px;
   background: rgba(255, 255, 255, 0.56);
   margin: 10px auto 0;
@@ -252,13 +252,21 @@ font-family: 'Comfortaa', cursive;
    width: 40%;
   height: 100%;
   float: left;
-  background: url(https://s-media-cache-ak0.pinimg.com/736x/f7/cf/e1/f7cfe19050679efd4fa855ab99461ac4.jpg);
+  background: url(https://66.media.tumblr.com/d8ba5f7342bb2fd3be5bec7677c1301e/tumblr_oiwxnu4FHD1skw17ko1_r1_1280.gifv);
   background-size: cover;
   color: #649DAD;
 /*   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 /* about p*/
-.about h1, p {margin-top: 40px;}
+.about h1 {margin-top: 60px;}
+.about p {
+  margin-top: 250px;
+  border-style: transparent;
+  background-color: #FDCFCF;
+  
+}
+
+
 /* form */
 form {
   margin-top: 20px;
@@ -287,7 +295,7 @@ input[type]:focus {
 
 .submit {
   background: transparent;
-  border: 2px solid #DEC8F6;
+  border: 2px solid #96CDDC;
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -326,10 +334,10 @@ input[type]:focus {
 }
 .terms i {
   text-decoration: underline;
-  color:#771B66;
+  color:#96CDDC;
   cursor: pointer;
 }
-.terms i:hover{color:#96F;}
+.terms i:hover{color:#96CDDC;}
 
 
 /* .login */
@@ -341,9 +349,9 @@ input[type]:focus {
 #login span{
   font-weight: bolder;
   text-decoration: underline;
-  color:#771B66;
+  color:#96CDDC;
   cursor: pointer;
 } 
-#login span:hover{color:#96F;}
+#login span:hover{color:#96CDDC;}
 
  
