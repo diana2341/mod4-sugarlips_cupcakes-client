@@ -6,6 +6,8 @@ import Profile from './components/Profile'
 import Signup from './components/Signup'
 import EditProfile from './components/EditProfile'
 import CupcakeContainer from './components/CupcakeContainer'
+import Login from './components/Login'
+
 
 class App extends Component {
 
@@ -45,7 +47,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Switch>
           <Route 
             path="/" 
             render={(routerProps) => 
@@ -72,7 +73,13 @@ class App extends Component {
             path="/cupcakes" 
             render={() => <CupcakeContainer />}
             />
-        </Switch>
+            <Route 
+            path="/log-in" 
+            render={(routerProps) => <Login 
+              form={this.state.form}
+              handleChange={this.handleChange}
+              {...routerProps} />} 
+            />
       </div>
     )
   }

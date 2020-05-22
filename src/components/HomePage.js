@@ -1,13 +1,16 @@
 import React from 'react'
-import Login from './Login'
 
 class HomePage extends React.Component {
 
-  render() {
+  handClick=()=>{
+    this.props.history.push('/cupcakes') 
+  }
+
+  render() { 
     return( 
       <div>
         <h1>Make yourself at home with gourmet cupcake</h1>
-        <Login />
+        <button onClick={this.handClick}>enter</button>
       </div>
     )
   }
