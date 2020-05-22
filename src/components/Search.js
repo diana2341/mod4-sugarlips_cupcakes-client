@@ -1,9 +1,16 @@
 import React from 'react'
 
-const Search = () => {
+const Search = props => {
+
   return (
     <div>
-      <input type="text" name="search" value=""/>
+      <label>Search: </label>
+      <input
+        onChange={null}
+        type="text" 
+        name="search" 
+        placeholder="search by flavor" 
+        value={null} />
     </div>
   )
 }
