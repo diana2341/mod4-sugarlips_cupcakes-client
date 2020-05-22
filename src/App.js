@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import MainContainer from './components/MainContainer';
 import HomePage from './components/HomePage'
 import Profile from './components/Profile'
-// import Form from './components/Form'
 import Signup from './components/Signup'
 import EditProfile from './components/EditProfile'
 import CupcakeContainer from './components/CupcakeContainer'
@@ -16,38 +14,27 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route 
-            path="/home" 
+            path="/" 
             render={(routerProps) => 
             <HomePage {...routerProps}/>}
             />
           <Route 
             path="/profile" 
-            render={(routerProps) => <Profile 
-            currentUser={this.state.currentUser} />} 
+            render={(routerProps) => <Profile />} 
             />
           <Route 
             path="/sign-up" 
-            render={(routerProps) => <Signup 
-            form={this.state.form}
-            handleChange={this.handleChange} />} 
+            render={(routerProps) => <Signup />} 
             />
           <Route 
             path="/edit-profile" 
-            render={(routerProps) => <EditProfile 
-            form={this.state.form}
-            handleChange={this.handleChange} />} 
+            render={(routerProps) => <EditProfile />} 
             />
-          {/* <Route 
-            path="/form" 
-            render={(routerProps) => <Form 
-            form={this.state.form}
-            handleChange={this.handleChange} />}
-            /> */}
           <Route 
             path="/cupcakes" 
-            render={()=><CupcakeContainer/>}/>
-          </Switch>
-        <MainContainer />
+            render={() => <CupcakeContainer />}
+            />
+        </Switch>
       </div>
     )
   }

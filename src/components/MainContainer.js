@@ -4,7 +4,7 @@ import Signup from './Signup'
 import CupcakeContainer from './CupcakeContainer'
 import Profile from './Profile'
 import EditProfile from './EditProfile'
-import Form from './Form'
+// import Form from './Form'
 
 export class MainContainer extends Component {
 
@@ -54,9 +54,9 @@ export class MainContainer extends Component {
         <EditProfile 
           form={this.state.form}
           handleChange={this.handleChange} />
-        < Form 
+        {/* < Form 
           form={this.state.form}
-          handleChange={this.handleChange} />
+          handleChange={this.handleChange} /> */}
       </div>
     )
   }
