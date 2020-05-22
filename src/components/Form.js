@@ -4,46 +4,48 @@ const Form = props => {
 
   const {firstName, lastName, address1, address2, city, zipcode, phoneNumber, creditCard} = props.form
 
+  const {handleChange} = props
+
   return (
     <div>
       <form>
         <label>First name: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="firstName" 
           value={firstName}></input><br />
 
         <label>Last name: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="lastName" 
           value={lastName}></input><br />
 
         <label>Address1: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="address1" 
           value={address1}></input><br />
           
         <label>Address2: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="address2" 
           value={address2}></input><br />
 
         <label>City: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="city" 
           value={city}></input><br />
 
         <label>State: </label>
-        <select onChange={null}>
+        <select onChange={handleChange}>
           <option>Select State</option>
           <option name="state" value="AL">AL</option>
           <option name="state" value="AK">AK</option>
@@ -99,30 +101,29 @@ const Form = props => {
 
         <label>Zipcode: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="zipcode" 
           value={zipcode}></input><br />
 
         <label>Phone number: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="phoneNumber" 
           value={phoneNumber}></input><br />
 
         <label>Credit card: </label>
         <input 
-          onChange={null} 
+          onChange={handleChange} 
           type="text" 
           name="creditCard" 
           value={creditCard}></input><br />
 
-        <input type="submit" value="Submit"/>
+        <input type="submit"/>
       </form>
     </div>
   )
 }
 
 export default Form
-

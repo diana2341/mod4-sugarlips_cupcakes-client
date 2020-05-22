@@ -32,12 +32,22 @@ class App extends Component {
     }
   }
 
+  handleChange = event => {
+    this.setState({
+      form: {
+        ...this.state.form, [event.target.name]: event.target.value
+      }
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Profile 
           currentUser={this.state.currentUser} />
-        < Form form={this.state.form}/>
+        < Form 
+          form={this.state.form}
+          handleChange={this.handleChange} />
       </div>
     )
   }
