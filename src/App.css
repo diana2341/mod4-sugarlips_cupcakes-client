@@ -56,8 +56,9 @@
 .cupcake-container{
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
+  background-color: #D9ECD0;
   padding: 10px;
+  margin-top: 65px;
 }
 
 /* login */
@@ -108,15 +109,15 @@
 	transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
+/* .login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
 	top: -20px; 
 	left: 0px; 
 	color: #03E9F4;
 	font-size: 12px;
-}
+} */
 
 
-.login-box form a {
+/* .login-box form a {
 	position: relative;
 	display: inline-block;
 	padding: 10px 20px;
@@ -128,9 +129,9 @@
 	transition: .5s;
 	margin-top: 40px;
 	letter-spacing: 4px;
-}
+} */
 
-.login-box form a:hover {
+/* .login-box form a:hover {
 	background: #03E9F4;
 	color: #F1EEE6;
 	border-radius: 5px;
@@ -138,84 +139,73 @@
 							 0 0 25px #03E9F4,
 							 0 0 50px #03E9F4,
 							 0 0 100px #03E9F4;
-}
-
-.login-box a span {
-	position: absolute;
-	display: block;
-}
-
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
+} */
+.login-box form input[type="submit"] {
+  background: rgba(217, 236, 208, 0.966);
+  border: 0;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
+  height: 40px;
+  border-radius: 3px;
+  color: rgb(29, 17, 17);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,100% {
-    left: 100%;
-  }
+.login-box form input[type="submit"]:hover {
+  background: #cf618f;
 }
 
-.login-box span:nth-child(2) {
-	top: -100%;
-	right: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(180deg, transparent, #03E9F4);
-	animation: btn-anim2 1s linear infinite;
-	animation-delay: .25s;
+/* navbar */
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
 }
 
-@keyframes btn-anim2 {
-	0%{
-		top: -100%;
-	}
-	50%,100% {
-		top: 100%;
-	}
+body{
+  /* background: url(https://i.pinimg.com/originals/86/5a/eb/865aeb8ad935a65cd746d7b7b8413aff.jpg); */
 }
 
-.login-box span:nth-child(3){
-	bottom: 0;
-	tight: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(270deg, transparent, #03E9F4);
-	animation: btn-anim3 1s linear infinite;
-	animation-delay: .5s;
+.container {
+  width: 100%;
+  position: relative;
 }
 
-@keyframes btn-anim3 {
-	0%{
-		right: -100%;
-	}
-	50%,100% {
-		right: 100%;
-	}
+header{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(182, 219, 164);
+  border-bottom: 5px solid rgb(162, 202, 144);
 }
 
-.login-box span:nth-child(4) {
-	bottom: -100%;
-	left: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(360deg, transparent, #30E9F4);
-	animation: btn-anim4 1s linear infinite;
-	/* animation-dealy: .75s; */
+header .logo a{
+  font-family: 'Trade Winds';
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+nav ul li{
+  display: inline-block;
+  padding:10px 5px;
+  list-style: none;
+}
+nav ul {
+  padding-top: 3px;
 }
 
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,100% {
-    bottom: 100%;
-  }
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+  border-bottom: 3px solid white;
 }

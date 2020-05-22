@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // import logo from './logo.svg';
 import React, { Component } from 'react';
 import './App.css';
@@ -7,6 +7,11 @@ import Profile from './components/Profile'
 import Form from './components/Form'
 import Signup from './components/Signup'
 import EditProfile from './components/EditProfile'
+import CupcakeContainer from './components/CupcakeContainer'
+import Navbar from './components/Navbar'
+
+import { Route, Link, Switch, Redirect } from 'react-router-dom';
+
 
 class App extends Component {
 
@@ -46,18 +51,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HomePage/>
-        <Profile 
-          currentUser={this.state.currentUser} />
-        <Signup 
-          form={this.state.form}
-          handleChange={this.handleChange} />
-        <EditProfile 
-          form={this.state.form}
-          handleChange={this.handleChange} />
-        < Form 
-          form={this.state.form}
-          handleChange={this.handleChange} />
+     <Navbar/>
+
+
+        <Switch>
+    <Route path="/home" render={(routerProps) =><HomePage {...routerProps}/>}/>
+    <Route path="/profile" render={(routerProps) => <Profile 
+            currentUser={this.state.currentUser} />}/>
+    <Route path="/sign-up" render={(routerProps) =><Signup 
+            form={this.state.form}
+            handleChange={this.handleChange} />}/>
+    <Route path="/edit-profile" render={(routerProps) =><EditProfile 
+            form={this.state.form}
+            handleChange={this.handleChange} />}/>
+    <Route path="/form" render={(routerProps) =>< Form 
+            form={this.state.form}
+            handleChange={this.handleChange} />}/>
+            {/* form for? */}
+    <Route path="/cupcakes" render={()=><CupcakeContainer/>}/>
+       
+          </Switch>
       </div>
     )
   }

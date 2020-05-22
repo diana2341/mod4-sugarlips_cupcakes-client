@@ -8,41 +8,53 @@ const Form = props => {
 
   return (
     <div>
-      <form>
+      <form className="login-box">
         <label>First name: </label>
+        <div className="user-box">
         <input 
           onChange={handleChange} 
           type="text" 
           name="firstName" 
           value={firstName}></input><br />
+        </div>
+
 
         <label>Last name: </label>
+        <div className="user-box">
         <input 
           onChange={handleChange} 
           type="text" 
           name="lastName" 
           value={lastName}></input><br />
+          </div>
+
 
         <label>Address1: </label>
+        <div className="user-box">
         <input 
           onChange={handleChange} 
           type="text" 
           name="address1" 
           value={address1}></input><br />
+        </div>
           
         <label>Address2: </label>
+        <div className="user-box">
         <input 
           onChange={handleChange} 
           type="text" 
           name="address2" 
           value={address2}></input><br />
+          </div>
 
         <label>City: </label>
+        <div className="user-box">
         <input 
           onChange={handleChange} 
           type="text" 
           name="city" 
           value={city}></input><br />
+          </div>
 
         <label>State: </label>
         <select onChange={handleChange}>
