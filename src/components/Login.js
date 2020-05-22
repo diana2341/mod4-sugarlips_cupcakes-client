@@ -14,6 +14,11 @@ export default class Login extends Component {
     })
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    console.log('logged in!')
+  }
+
   render() {
     console.log(this.state.username)
     console.log(this.state.password)
@@ -22,7 +27,7 @@ export default class Login extends Component {
       <div className="login-box">
         <h2>Login</h2>
       
-        <form >
+        <form>
           <div className="user-box">
             <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
             <label>Username</label>
@@ -33,7 +38,7 @@ export default class Login extends Component {
             <label >Password</label>
           </div>
               
-          <a href="">
+          <a onClick={this.handleSubmit} href="">
             <span></span>
             <span></span>
             <span></span>
@@ -45,4 +50,3 @@ export default class Login extends Component {
     )
   }
 }
-

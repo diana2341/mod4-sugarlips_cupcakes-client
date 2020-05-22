@@ -2,7 +2,6 @@ import React from 'react'
 import Login from './Login'
 import CupcakeContainer from './CupcakeContainer'
 
-
 class HomePage extends React.Component {
   render() {
     return( 
