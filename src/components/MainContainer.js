@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import HomePage from './HomePage'
-import Profile from './Profile'
-import Form from './Form'
 import Signup from './Signup'
+import CupcakeContainer from './CupcakeContainer'
+import Profile from './Profile'
 import EditProfile from './EditProfile'
+import Form from './Form'
 
 export class MainContainer extends Component {
 
@@ -43,7 +44,8 @@ export class MainContainer extends Component {
   render() {
     return (
       <div>
-        <HomePage/>
+        <HomePage />
+        <CupcakeContainer />
         <Profile 
           currentUser={this.state.currentUser} />
         <Signup 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Login from './Login'
-import CupcakeContainer from './CupcakeContainer'
 
 class HomePage extends React.Component {
 
@@ -9,7 +8,6 @@ class HomePage extends React.Component {
       <div>
         <h1>Make yourself at home with gourmet cupcake.</h1>
         <Login />
-        <CupcakeContainer />
       </div>
     )
   }
