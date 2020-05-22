@@ -5,6 +5,7 @@ import './App.css';
 import Profile from './components/Profile'
 import Form from './components/Form'
 import Signup from './components/Signup'
+import EditProfile from './components/EditProfile'
 
 class App extends Component {
 
@@ -48,7 +49,10 @@ class App extends Component {
           currentUser={this.state.currentUser} />
         <Signup 
           form={this.state.form}
-          handleChange={this.handleChange}/>
+          handleChange={this.handleChange} />
+        <EditProfile 
+          form={this.state.form}
+          handleChange={this.handleChange} />
         < Form 
           form={this.state.form}
           handleChange={this.handleChange} />
