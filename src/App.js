@@ -3,6 +3,7 @@ import './App.css';
 
 // testing
 import Profile from './components/Profile'
+import Form from './components/Form'
 
 class App extends Component {
 
@@ -17,6 +18,17 @@ class App extends Component {
       zipcode: "07621",
       phoneNumber: "347-264-0904",
       creditCard: "345465788909"
+    },
+    form: {
+      firstName: "",
+      lastName: "",
+      address1: "",
+      address2: "",
+      city: "",
+      state: "",
+      zipcode: "",
+      phoneNumber: "",
+      creditCard: ""
     }
   }
 
@@ -25,6 +37,7 @@ class App extends Component {
       <div className="App">
         <Profile 
           currentUser={this.state.currentUser} />
+        < Form form={this.state.form}/>
       </div>
     )
   }
