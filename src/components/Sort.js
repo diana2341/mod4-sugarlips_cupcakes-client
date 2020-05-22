@@ -6,9 +6,10 @@ const Sort = props => {
     <div>
       <label>Sort By: </label>
       <select>
-        <option></option>
-        <option></option>
-        <option></option>
+        <option>Select</option>
+        <option>Name</option>
+        <option>Flavor</option>
+        <option>Price</option>
       </select>
     </div>
   )
