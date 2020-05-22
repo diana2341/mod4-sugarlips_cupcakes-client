@@ -4,6 +4,7 @@ import './App.css';
 // testing
 import Profile from './components/Profile'
 import Form from './components/Form'
+import Signup from './components/Signup'
 
 class App extends Component {
 
@@ -45,6 +46,9 @@ class App extends Component {
       <div className="App">
         <Profile 
           currentUser={this.state.currentUser} />
+        <Signup 
+          form={this.state.form}
+          handleChange={this.handleChange}/>
         < Form 
           form={this.state.form}
           handleChange={this.handleChange} />
