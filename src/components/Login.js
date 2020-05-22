@@ -25,7 +25,7 @@ export default class Login extends Component {
     console.log(this.state.password)
 
     return (
-      <div className="login-box">
+      <div className="login-box" onSubmit={this.handleSubmit}>
         <h2>Login</h2>
       
         <form>
@@ -39,13 +39,7 @@ export default class Login extends Component {
             <label >Password</label>
           </div>
               
-          <a onClick={this.handleSubmit} href="">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Enter
-          </a>
+          <input type="submit"/>
         </form>
       </div>
     )
