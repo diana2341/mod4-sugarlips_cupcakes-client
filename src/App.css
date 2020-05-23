@@ -836,22 +836,38 @@ input[type]:focus {
   padding:auto;
 }
 
- /* profile paage */
+ /* profile paage ===========================*/
 
  .card-profile {
   --card-bg-color: hsla(315, 68%, 73%, 0.856);
   --card-bg-color-transparent: hsla(314, 22%, 26%, 0.192);
+  /* position: relative; */
+
+  width: 700px;
   position: relative;
-  width: 300px;
- }
+  top: 10%;
+  left: 30%;
+  margin-top: 2em;
+  margin-left: -50px;
+  /* bottom: 0px; */
+ height:auto;
+ border:2px solid #0f9ff9;
+     
+
+
+
+}
 
   .card-borders {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 400px;
     overflow: hidden;
+    
+   
+ 
   }
 
     .border-top {
@@ -899,7 +915,7 @@ input[type]:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0 40px 0;
+    padding: 100px 0 5px 0;
     font-family: Lato, sans-serif;
     background: var(--card-bg-color-transparent);
     box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.028),
@@ -911,10 +927,11 @@ input[type]:focus {
     opacity: 0;
     transform: scale(0.6);
     animation: bump-in 0.5s 0.8s forwards;
+    box-sizing: inherit;
   }
 
   .profileImg{
-    bottom: 2em;
+    bottom:80px;
     z-index:3;
     position:relative;
     border-radius:100%;
@@ -923,9 +940,37 @@ input[type]:focus {
     border:2px solid #0f9ff9;
     overflow:hidden ;
     margin:0 auto;
-    text-align:center;     
+    right: 12em;
+    /* text-align:center;      */
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);      
            
+   }
+   .profile-buttons{
+     position: relative;
+     right: 12em ;   
+     bottom: 20px;
+    
+   }
+   .profile-button-design{
+    border-radius: 4px;
+    background-color: rgba(235, 222, 222, 0.397);
+    color: black;
+    border: 1px solid #0f9ff9; 
+    padding: 10px 24px
+   }
+   .profile-information{
+    width:380px;
+    height: 367px;
+
+    position: absolute;
+    bottom: -1px;
+    left: 20em;
+    border:solid;
+    overflow: hidden;
+    border:2px solid #0f9ff9;
+
+
+
    }
 
     .username {
@@ -934,6 +979,8 @@ input[type]:focus {
       letter-spacing: 2px;
       margin-bottom: 40px;
       color: transparent;
+      right: 7em;
+
       animation: fill-text-white 1.2s 2s forwards;
     }
 
@@ -945,7 +992,7 @@ input[type]:focus {
         width: 100%;
         height: 100%;
         color: black;
-        background: #35b9f1;
+        background: rgba(233, 88, 117, 0.788);
         transform: scaleX(0);
         transform-origin: left;
         animation: slide-in-out 1.2s 1.2s cubic-bezier(0.75, 0, 0, 1) forwards;
