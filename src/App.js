@@ -48,11 +48,6 @@ class App extends Component {
     return (
       <div className="App">
           <Route 
-            path="/" 
-            render={(routerProps) => 
-            <HomePage {...routerProps} />}
-            />
-          <Route 
             path="/profile" 
             render={(routerProps) => <Profile 
               currentUser={this.state.currentUser} />} 
@@ -74,11 +69,16 @@ class App extends Component {
             render={() => <CupcakeContainer />}
             />
             <Route 
-            path="/log-in" 
-            render={(routerProps) => <Login 
+              exact path="/login" 
+              render={(routerProps) => <Login 
               form={this.state.form}
               handleChange={this.handleChange}
               {...routerProps} />} 
+            />
+          <Route 
+            exact path="/" 
+            render={(routerProps) => 
+            <HomePage {...routerProps} />}
             />
       </div>
     )

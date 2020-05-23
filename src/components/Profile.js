@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Profile = props => {
 
@@ -6,6 +7,7 @@ const Profile = props => {
   
     return (
       <div>
+        <Navbar />
         <h1>Profile Page</h1>
         <h2>{firstName} {lastName}</h2>
         <h3>Address</h3>

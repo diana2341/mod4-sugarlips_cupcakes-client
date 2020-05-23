@@ -3,10 +3,19 @@ import React, { Component } from 'react'
 export default class Login extends Component {
 
   state = {
-    username:'',
-    password:''
+    username: '',
+    loginUser: {}
   }
 
+  loginUser = username => {
+    fetch(`http://localhost:3000/users/${username}`)
+    .then(resp => resp.json())
+    .then(user => this.setState({
+      loginUser: user
+      })
+    )
+  }
+  
   handleChange = event => {
     const {name, value} = event.target
     this.setState({
@@ -14,16 +23,12 @@ export default class Login extends Component {
     })
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event, username) => {
     event.preventDefault()
-    console.log('logged in!')
-    this.props.history.push('/cupcakes') 
+    this.loginUser(username)
   }
 
   render() {
-    console.log(this.state.username)
-    console.log(this.state.password)
-
     return (
       <div className="login-box">
         <h2>Login</h2>
@@ -35,11 +40,13 @@ export default class Login extends Component {
           </div>
       
           <div className="user-box">
-            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+            <input type="password" name="password" />
             <label >Password</label>
           </div>
               
-          <a onClick={this.handleSubmit} href="">
+          <a 
+            onClick={event => this.handleSubmit(event, this.state.username)}
+            href="">
             <span></span>
             <span></span>
             <span></span>
