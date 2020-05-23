@@ -6,11 +6,21 @@ import Navbar from './Navbar'
 class CupcakeContainer extends React.Component {
 
   state = {
-      cupcakes: cupcakes
+      cupcakes: []
+  }
+  fetchCupCakes=()=>{
+fetch('http://localhost:4000/cupcakes')
+.then(resp=>resp.json())
+.then((data)=>{
+  this.setState({cupcakes:data})
+})
+  }
+  componentDidMount(){
+    this.fetchCupCakes()
   }
 
   render() {
-      // console.log(this.state.cupcakes)
+      console.log(this.state.cupcakes)
     return( 
       <div>
         <Navbar />
