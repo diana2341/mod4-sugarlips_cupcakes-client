@@ -1,55 +1,51 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default class Login extends Component {
+const Login = props => {
 
-  state = {
-    username:'',
-    password:''
-  }
+  const {handleChange, handleLoginSubmit, username} = props
 
-  handleChange = event => {
-    const {name, value} = event.target
-    this.setState({
-      [name]: value
-    })
-  }
+  return (
+    <div className="con">
+      <div className="card">
+        <div className="about-login">
+          <h1>Login</h1>
+          <p>Welcome Back Sugar Friend!!</p>
+        </div>
 
-  handleSubmit = event => {
-    event.preventDefault()
-    console.log('logged in!')
-    this.props.history.push('/cupcakes') 
-  }
+        <form autoComplete="off">
+          <div className="inputs-login">
+            <input 
+              type="text" 
+              name="username" 
+              value={username} 
+              onChange={handleChange}  
+              placeholder="enter username" 
+              required /><br/>
 
-  render() {
-    console.log(this.state.username)
-    console.log(this.state.password)
+            <input 
+              type="password" 
+              name="password" 
+              placeholder="enter password" 
+              required/>
+          </div>
 
-    return (
-     
+          <button
+            onClick={event => { 
+              handleLoginSubmit(event, username)
+              props.history.push('/cupcakes') 
+              }
+            }
+            className="submit-login"
+          >Login</button>
 
- <div className="con">
-  <div className="card">
-    <div className="about-login">
-      <h1>Login</h1>
-      <p>Welcome Back Sugar Friend!!</p>
- </div>
-  <form autoComplete="off" onSubmit={this.handleSubmit}>
-      <div className="inputs-login">
-        <input type="text" name="username" value={this.state.username} onChange={this.handleChange}  placeholder="username" required/><br/>
-          
-        <input type="password" name="password" value={this.state.password} onChange={this.handleChange}  placeholder="Password" required/>
+          <div className="login-to">
+            <label id="login-to" ><p> Not a member? <Link to="/ signup"><span>Hurry sign up!</span></Link></p></label> 
+          </div>  
+        </form>
       </div>
-    <button className="submit-login">Login</button>  
-    <div className="login-to">
-      <label id="login-to" ><p> Not a member? <Link to="/sign-up"><span>Hurry sign up!</span></Link></p></label> 
-      </div>  
-   </form>
-  </div>
-    {/* <h1>{this.state.username}</h1>
-    <h1>{this.state.password}</h1> */}
-
- </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default Login
