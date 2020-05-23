@@ -40,8 +40,8 @@
 
 /* cupcake css */
 .cupcake-card{
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color:  rgba(223, 211, 211, 0.356) ;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -56,9 +56,11 @@
 .cupcake-container{
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #D9ECD0;
+  background-color: linear-gradient( 135deg, #FDCFCF 10%, rgb(243, 176, 176) 100%);
   padding: 10px;
   margin-top: 65px;
+  grid-gap: 10px;
+
 }
 
 /* login */
@@ -182,8 +184,8 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: rgb(182, 219, 164);
-  border-bottom: 5px solid rgb(162, 202, 144);
+  background-color: rgb(223, 157, 157);
+  border-bottom: 5px solid rgb(231, 144, 144);
 }
 
 header .logo a{
@@ -242,7 +244,7 @@ font-family: 'Comfortaa', cursive;
   margin: 10px auto 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  background: rgba(0,0,0,0.07) 73%);
+  /* background: rgba(0,0,0,0.07) 73%); */
   text-align: center;
   border-radius: 5px;
   position: relative;
@@ -479,5 +481,56 @@ input[type]:focus {
   cursor: pointer;
 } 
 #login-t0 span:hover{color:#96CDDC;}
+
+/* poloroid */
+
+
+.bg-img {
+  border: 30px solid #eeeeee;
+  border-bottom: 135px solid #eeeeee;
+  border-width:100%;
+  
+  border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
+   z-index: 9.0;
+  -webkit-box-shadow: 15px 15px 15px #777;
+  -moz-box-shadow: 13px 13px 13px #777;
+  box-shadow: 10px 8px 50px #000;
+}
+
+
+.bg-img {
+  width: 400px;
+  height: 400px;
+  
+
+  &:before {
+    content: "";
+		position: absolute;
+		top: 30px;
+		right: -60px;
+		bottom:0;
+		left: 0;
+		background-image: linear-gradient(to bottom right, teal, #f4f4f4);
+    z-index:3;
+		opacity: .4; 
+	  width: 400px;
+    height: 400px;
+	  margin:auto;
+	  align-content: center;
+	  margin-top: 50px;
+   -moz-box-shadow:    inset 0 0 10px #4C4C4C;
+   -webkit-box-shadow: inset 0 0 10px #4C4C4C;
+   box-shadow:         inset 0 0 10px #4C4C4C;	    
+  }
+}
+
+/* Handwritten Text at the bottom of your polaroid ---------- */
+.text{
+  font-family: 'Amatic SC', cursive;
+  font-size:65px;
+  color:#000;
+  margin-top:420px;
+  padding:auto;
+}
 
  

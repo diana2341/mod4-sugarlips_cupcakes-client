@@ -42,7 +42,7 @@ export default class Login extends Component {
       </div>
     <button className="submit-login">Login</button>  
     <div className="login-to">
-      <label id="login-to" ><p> Already a member! <Link to="/sign-up"><span>Login</span></Link></p></label> 
+      <label id="login-to" ><p> Not a member? <Link to="/sign-up"><span>Hurry sign up!</span></Link></p></label> 
       </div>  
    </form>
   </div>
