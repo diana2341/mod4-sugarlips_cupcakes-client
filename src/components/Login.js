@@ -40,7 +40,7 @@ const Login = props => {
           >Login</button>
 
           <div className="login-to">
-            <label id="login-to" ><p> Not a member? <Link to="/ signup"><span>Hurry sign up!</span></Link></p></label> 
+            <label id="login-to" ><p> Not a member? <Link to="/signup"><span>Hurry sign up!</span></Link></p></label> 
           </div>  
         </form>
       </div>
