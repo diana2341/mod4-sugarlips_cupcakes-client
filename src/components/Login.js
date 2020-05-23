@@ -25,23 +25,27 @@ export default class Login extends Component {
     console.log(this.state.password)
 
     return (
-      <div className="login-box" onSubmit={this.handleSubmit}>
-        <h2>Login</h2>
-      
-        <form>
-          <div className="user-box">
-            <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-            <label>Username</label>
-          </div>
-      
-          <div className="user-box">
-            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-            <label >Password</label>
-          </div>
-              
-          <input type="submit"/>
-        </form>
+     
+
+ <div className="con">
+  <div className="card">
+    <div className="about-login">
+      <h1>Login</h1>
+      <p>Welcome Back Friend!!</p>
+ </div>
+  <form autoComplete="off" onSubmit={this.handleSubmit}>
+      <div className="inputs-login">
+        <input type="text" name="username" value={this.state.username} onChange={this.handleChange}  placeholder="username" required/><br/>
+          
+        <input type="password" name="password" value={this.state.password} onChange={this.handleChange}  placeholder="Password" required/>
       </div>
+    <button className="submit-login">SIGN UP</button>    
+   </form>
+  </div>
+    {/* <h1>{this.state.username}</h1>
+    <h1>{this.state.password}</h1> */}
+
+ </div>
     )
   }
 }

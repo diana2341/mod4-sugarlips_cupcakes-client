@@ -62,7 +62,7 @@
 }
 
 /* login */
-.login-box {
+/* .login-box {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -140,7 +140,7 @@
 							 0 0 50px #03E9F4,
 							 0 0 100px #03E9F4;
 } */
-.login-box form input[type="submit"] {
+/* .login-box form input[type="submit"] {
   background: rgba(217, 236, 208, 0.966);
   border: 0;
   width: 100%;
@@ -153,7 +153,7 @@
 
 .login-box form input[type="submit"]:hover {
   background: #cf618f;
-}
+}  */
 
 /* navbar */
 @import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
@@ -267,6 +267,8 @@ font-family: 'Comfortaa', cursive;
 }
 
 
+
+
 /* form */
 form {
   margin-top: 20px;
@@ -277,6 +279,7 @@ form {
 }
 /* input[type=text] */
 form .inputs input {
+
   width: 45%;
   padding: 12px 20px;
   margin: 10px 0;
@@ -294,6 +297,7 @@ input[type]:focus {
 
 
 .submit {
+
   background: transparent;
   border: 2px solid #96CDDC;
   width: 50%;
@@ -325,19 +329,141 @@ input[type]:focus {
 .submit:hover:before{
   height:100%;
 }
-/* terms */
 
-/* p  */
-.terms p{
+
+
+
+
+/* .for login */
+/* .login {margin-top: 30px;}
+#login p {
   font-size: 80%;
-  display: inline-block;
-}
-.terms i {
+}  
+
+#login span{
+  font-weight: bolder;
   text-decoration: underline;
   color:#96CDDC;
   cursor: pointer;
+} 
+#login span:hover{color:#96CDDC;} */
+
+ 
+
+.card {
+  width: 900px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.56);
+  margin: 10px auto 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  background: rgba(0,0,0,0.07) 73%);
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 5%;
 }
-.terms i:hover{color:#96CDDC;}
+.about-login{
+   width: 40%;
+  height: 100%;
+  float: left;
+  background: url(https://66.media.tumblr.com/d8ba5f7342bb2fd3be5bec7677c1301e/tumblr_oiwxnu4FHD1skw17ko1_r1_1280.gifv);
+  background-size: cover;
+  color: #649DAD;
+/*   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+/* about p*/
+.about-login h1 {
+  margin-top: 60px;
+  margin-left: 600px;
+
+
+}
+.about-login p {
+  margin-top: 250px;
+  border-style: transparent;
+  background-color: #FDB6C8;
+  border-width: thick;
+  height: 30px;
+
+  
+}
+
+
+/* about for the login form */
+.about-login{
+  width: 40%;
+ height: 100%;
+ float: left;
+ background: url(https://i.pinimg.com/736x/0a/ae/e3/0aaee35712f512b9feff73d528636a6f.jpg);
+ background-size: cover;
+ color: #649DAD;
+/*   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+/* form */
+form {
+  margin-top: 20px;
+  width: 60%;
+  height: 100%;
+  float: right;
+  overflow: hidden;
+}
+/* input[type=text] */
+form .inputs-login input {
+  position: relative;
+  top:90px;
+  width: 45%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  font-family: 'Comfortaa', cursive;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0.140);
+  border-radius: 5px;
+  
+}
+input[type]:focus {
+   background: rgba(0,0,0,0.40);
+    color: #FFF;
+}
+
+
+.submit-login {
+  top: 90px;
+
+  background: transparent;
+  border: 2px solid #96CDDC;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-family: 'Comfortaa', cursive;
+   outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+  
+  position: relative;
+}
+.submit::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:0;
+  background: rgba(0,0,0,0.32);
+  top:0;
+  left:0;
+  z-index:-1;
+  transition: all 0.3s;
+  content: '';
+  position: absolute;
+}
+.submit:hover:before{
+  height:100%;
+}
+
 
 
 /* .login */
