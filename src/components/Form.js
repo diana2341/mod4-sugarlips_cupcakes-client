@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Form = props => {
 
@@ -128,16 +129,16 @@ const Form = props => {
 
 {/*  */}
 {/* <!-- card ui --> */}
-<div class="con">
-  <div class="card">
-    <div class="about">
+<div className="con">
+  <div className="card">
+    <div className="about">
       <h1>Sign up</h1>
 {/* <!--       <h2>oDsoky .<span>inc</span></h2> --> */}
       <p>Join Our Community</p>
     </div>
-    <form autocomplete="off">
+    <form autoComplete="off">
 
-      <div class="inputs">
+      <div className="inputs">
 {/* <!--         <i class="fa fa-envelope-o" aria-hidden="true"></i> --> */}
         <input 
          onChange={handleChange} 
@@ -179,7 +180,8 @@ const Form = props => {
           placeholder="City"
 
           />
-        <input  onChange={handleChange} 
+        <input  
+          onChange={handleChange} 
           type="text" 
           name="zipcode" 
           value={zipcode}
@@ -194,7 +196,8 @@ const Form = props => {
           placeholder="Credit card" 
 
           />
-        <input   onChange={handleChange} 
+        <input   
+          onChange={handleChange} 
           type="text" 
           name="phoneNumber" 
           value={phoneNumber} 
@@ -258,8 +261,8 @@ const Form = props => {
       </div>
     <button className="submit">SIGN UP</button>
 
-      <div class="login">
-      <label id="login" for="login"><p> Already a member! <span> Login </span></p></label> 
+      <div className="login">
+      <label id="login" ><p> Already a member! <Link to="/log-in"><span>Login</span></Link></p></label> 
       </div>
       </form> 
     </div>
