@@ -35,6 +35,7 @@ class App extends Component {
       creditCard: ""
     },
     username: '',
+    password: '',
     loggedInUser: {}
   }
 
@@ -54,8 +55,23 @@ class App extends Component {
       })
     )
   }
+
+  createNewUser = user => {
+    fetch(`http://localhost:3000/users`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+    .then(resp => resp.json())
+    .then(user => this.setState({
+      loggedInUser: user
+      }))
+  }
   
-  handleLoginChange = event => {
+  handleChange = event => {
     const {name, value} = event.target
     this.setState({
       [name]: value
@@ -65,6 +81,11 @@ class App extends Component {
   handleLoginSubmit = (event, username) => {
     event.preventDefault()
     this.loginUser(username)
+  }
+
+  handleSignupSubmit = (event, user) => {
+    event.preventDefault()
+    this.createNewUser(user)
   }
 
   render() {
@@ -78,8 +99,10 @@ class App extends Component {
         <Route 
           path="/signup" 
           render={(routerProps) => <Signup 
-          form={this.state.form}
-          handleFormChange={this.handleFormChange} />} 
+          username={this.state.username}
+          password={this.state.password}
+          handleChange={this.handleChange}
+          handleSignupSubmit={this.handleSignupSubmit} />} 
         />
         <Route 
           path="/edit-profile" 
@@ -95,8 +118,7 @@ class App extends Component {
           exact path="/login" 
           render={(routerProps) => <Login 
           username={this.state.username}
-          loginUser={this.loginUser}
-          handleLoginChange={this.handleLoginChange}
+          handleChange={this.handleChange}
           handleLoginSubmit={this.handleLoginSubmit}
           {...routerProps} />} 
         />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Login = props => {
 
-  const {handleLoginChange, handleLoginSubmit, username} = props
+  const {handleChange, handleLoginSubmit, username} = props
 
   return (
     <div className="login-box">
@@ -12,7 +12,7 @@ const Login = props => {
         <div className="user-box">
           <label>Username</label>
           <input 
-            onChange={handleLoginChange}
+            onChange={handleChange}
             type="text" 
             name="username" 
             value={username} />
