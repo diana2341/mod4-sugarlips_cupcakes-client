@@ -851,7 +851,7 @@ input[type]:focus {
   margin-left: -50px;
   /* bottom: 0px; */
  height:auto;
- border:2px solid #0f9ff9;
+ /* border:2px solid #0f9ff9; */
      
 
 
@@ -961,13 +961,13 @@ input[type]:focus {
    .profile-information{
     width:380px;
     height: 367px;
-
+background-color: rgba(248, 246, 246, 0.658);
     position: absolute;
     bottom: -1px;
     left: 20em;
     border:solid;
-    overflow: hidden;
-    border:2px solid #0f9ff9;
+    overflow: scroll;
+    border:2px solid #0f9ff93a;
 
 
 
