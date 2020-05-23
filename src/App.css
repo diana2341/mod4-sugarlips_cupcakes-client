@@ -845,9 +845,9 @@ input[type]:focus {
 
   width: 700px;
   position: relative;
-  top: 10%;
+  top: 15%;
   left: 30%;
-  margin-top: 2em;
+  margin-top: 10em;
   margin-left: -50px;
   /* bottom: 0px; */
  height:auto;
