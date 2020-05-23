@@ -33,10 +33,12 @@ class App extends Component {
       zipcode: "",
       phoneNumber: "",
       creditCard: ""
-    }
+    },
+    username: '',
+    loggedInUser: {}
   }
 
-  handleChange = event => {
+  handleFormChange = event => {
     this.setState({
       form: {
         ...this.state.form, [event.target.name]: event.target.value
@@ -44,42 +46,65 @@ class App extends Component {
     })
   }
 
+  loginUser = username => {
+    fetch(`http://localhost:3000/users/${username}`)
+    .then(resp => resp.json())
+    .then(user => this.setState({
+      loggedInUser: user
+      })
+    )
+  }
+  
+  handleLoginChange = event => {
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleLoginSubmit = (event, username) => {
+    event.preventDefault()
+    this.loginUser(username)
+  }
+
   render() {
     return (
       <div className="App">
-          <Route 
-            path="/profile" 
-            render={(routerProps) => <Profile 
-              currentUser={this.state.currentUser} />} 
-            />
-          <Route 
-            path="/sign-up" 
-            render={(routerProps) => <Signup 
-              form={this.state.form}
-              handleChange={this.handleChange} />} 
-            />
-          <Route 
-            path="/edit-profile" 
-            render={(routerProps) => <EditProfile 
-              form={this.state.form}
-              handleChange={this.handleChange} />} 
-            />
-          <Route 
-            path="/cupcakes" 
-            render={() => <CupcakeContainer />}
-            />
-            <Route 
-              exact path="/login" 
-              render={(routerProps) => <Login 
-              form={this.state.form}
-              handleChange={this.handleChange}
-              {...routerProps} />} 
-            />
-          <Route 
-            exact path="/" 
-            render={(routerProps) => 
-            <HomePage {...routerProps} />}
-            />
+        <Route 
+          path="/profile" 
+          render={(routerProps) => <Profile 
+          currentUser={this.state.currentUser} />} 
+        />
+        <Route 
+          path="/signup" 
+          render={(routerProps) => <Signup 
+          form={this.state.form}
+          handleFormChange={this.handleFormChange} />} 
+        />
+        <Route 
+          path="/edit-profile" 
+          render={(routerProps) => <EditProfile 
+          form={this.state.form}
+          handleFormChange={this.handleFormChange} />} 
+        />
+        <Route 
+          path="/cupcakes" 
+          render={() => <CupcakeContainer />}
+        />
+        <Route 
+          exact path="/login" 
+          render={(routerProps) => <Login 
+          username={this.state.username}
+          loginUser={this.loginUser}
+          handleLoginChange={this.handleLoginChange}
+          handleLoginSubmit={this.handleLoginSubmit}
+          {...routerProps} />} 
+        />
+        <Route 
+          exact path="/" 
+          render={(routerProps) => 
+          <HomePage {...routerProps} />}
+        />
       </div>
     )
   }
