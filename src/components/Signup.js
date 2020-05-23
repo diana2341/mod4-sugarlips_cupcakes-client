@@ -29,8 +29,8 @@ const Signup = props => {
               
           <a 
             onClick={event => {
-            handleSignupSubmit(event, {username: username, password: password})
-            props.history.push('/cupcakes')
+              handleSignupSubmit(event, {username: username, password: password})
+              props.history.push('/cupcakes')
               }
             }
             href="">
