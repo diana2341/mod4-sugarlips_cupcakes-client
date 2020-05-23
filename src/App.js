@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage'
 import Profile from './components/Profile'
@@ -7,6 +7,8 @@ import Signup from './components/Signup'
 import EditProfile from './components/EditProfile'
 import CupcakeContainer from './components/CupcakeContainer'
 import Login from './components/Login'
+import CssCupcake from './components/CssCupcake'
+
 
 
 class App extends Component {
@@ -127,6 +129,10 @@ class App extends Component {
           exact path="/" 
           render={(routerProps) => 
           <HomePage {...routerProps} />}
+        />
+        <Route 
+          exact path="/animation" 
+          render={() => <CssCupcake />}
         />
       </div>
     )
