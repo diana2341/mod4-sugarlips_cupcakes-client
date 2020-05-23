@@ -7,6 +7,8 @@ import Signup from './components/Signup'
 import EditProfile from './components/EditProfile'
 import CupcakeContainer from './components/CupcakeContainer'
 import Login from './components/Login'
+import CssCupcake from './components/CssCupcake'
+
 
 
 class App extends Component {
@@ -79,6 +81,10 @@ class App extends Component {
               form={this.state.form}
               handleChange={this.handleChange}
               {...routerProps} />} 
+            />
+            <Route 
+            path="/animation" 
+            render={() => <CssCupcake />}
             />
       </div>
     )

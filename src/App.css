@@ -1,3 +1,322 @@
+/* cupcake animation!! */
+.cupcake{
+   /* border: 1px solid rgba(0, 0, 0, 0.8); */
+   content: "";
+   /* position: absolute; */
+   margin-left: 2em;
+ margin-top: -1em;
+  height: 30vh;
+  width: 30vh;
+  position: absolute;
+   animation: 2s jump ease-out infinite alternate;
+  z-index: 10;
+
+}
+.cupcake-body{
+ position: absolute;
+  width: 18vh;
+  bottom: 4vh;
+  left: 6vh;
+
+ border-top: 10vh solid #BD8964;
+ border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: 3vh solid transparent;
+  border-right: 3vh solid transparent;
+  border-bottom: none;
+  z-index: 90;
+  
+  
+}
+/*recheck y use  */
+
+.cupcake-body ::after{
+content: '';
+
+  position: absolute;
+  width: 12vh;
+  height: 4vh;
+  background: linear-gradient(to bottom, #ff87a4 60%, #e3748f);
+  bottom: -1.65vh;
+  border-radius: 50%;
+
+}
+
+.eye{
+width:4vh;
+height:4vh;
+border-radius:50%;
+position:absolute;
+background:#472a1c;
+top:19vh;
+z-index:110
+}
+/*  check y*/
+.eye::before{
+content:'';
+position:absolute;
+top:.95vh;
+left:.95vh;
+width:3.15vh;
+height:3.15vh;
+border-radius:60%;
+/* background:white; */
+animation:4s eye infinite
+}
+.eye::after{
+content:'';
+position:absolute;
+top:1.5vh;
+left:1vh;
+width:.9vh;
+height:.9vh;
+border-radius:50%;
+background:white;
+animation: 4s eye infinite;
+  
+}
+
+.eye-left{
+left:8.8vh;
+}
+.eye-right{
+left: 17.5vh
+}
+
+
+.blush{
+  position: absolute;
+  width: 2vh;
+  height: 1vh;
+  bottom: 6.5vh;
+  z-index: 109;
+  border-radius: 50%;
+  background: #F48385;
+  animation: .1s shake infinite;
+
+}
+.blush-l{ left: 8.4vh; }
+.blush-r{ left: 19.5vh; }
+
+.mouth{
+ position: absolute;
+  top: 23vh;
+  left: calc(15vh - 1.5vh);
+
+  border-top-left-radius: 1.5vh;
+  border-top-right-radius: 1.5vh;
+  border: 1.5vh solid #ff2a7b;
+  transform: rotateZ(180deg);
+
+  z-index: 110;
+  animation: 2s mouth infinite alternate;
+}
+
+.frosting{
+  position: absolute;
+  width: 22vh;
+  height: 15vh;
+  bottom: 12vh;
+  left: 4vh;
+}
+.frosting__item:nth-of-type(1){
+  position: absolute;
+  width: 100%;
+  height: 8vh;
+  border-radius: 5vh;
+  bottom: 0;
+  z-index: 100;
+  background: #7CCDC7;
+
+}
+.frosting__item:nth-of-type(1)::after{
+  content: '';
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  right: -.5vh;
+  top: -2vh;
+  border-radius: 50%;
+  background: #fc5a8d;
+  background: linear-gradient(120deg, rgba(124, 205, 200) 40%, #7CCDC7);
+
+}
+.frosting__item:nth-of-type(1)::before{
+  content: '';
+  position: absolute;
+  width: 18vh;
+  height: 3vh;
+  left: 2vh;
+  bottom: -.8vh;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #7CCDC7 30%, #7CCDC7);
+
+}
+.frosting__item:nth-of-type(2){
+  position: absolute;
+  width: 16vh;
+  height:5vh;
+  bottom: 6vh;
+  left: 3vh;
+  border-radius: 5vh;
+  z-index: 80;
+  background: #7CCDC7;
+}
+.frosting__item:nth-of-type(2)::after{
+  content: '';
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  right: 0;
+  top: -1vh;
+  border-radius: 50%;
+  background: #7CCDC7;
+}
+.frosting__item:nth-of-type(3){
+  position: absolute;
+  width: 12vh;
+  height: 10vh;
+  left: 5vh;
+  border-radius: 50%;
+  top: 0;
+  z-index: 70;
+  background: #7CCDC7;
+}
+.frosting__item:nth-of-type(3)::before{
+  content: '';
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  right: 0;
+  top: 0vh;
+  border-radius: 50% / 60%;
+  background: #e30b5d;
+  transform: rotateZ(-10deg);
+}
+
+/* cherry */
+.frosting__item:nth-of-type(3)::after{
+  content: '';
+  position: absolute;
+  width: 1vh;
+  height: 1vh;
+  right: 1vh;
+  top: .75vh;
+  border-radius: 50%;
+  background: white;
+  opacity: .4;
+}
+
+.sprinkle{
+  width: 2vh;
+  height: 0.9vh;
+  position: absolute;
+  top: 10vh;
+  left: 8vh;
+
+  border-radius: 50%;
+  transform: rotateZ(35deg);
+  z-index: 200;
+}
+.sprinkle:nth-of-type(2){
+  top: 8vh;
+  left: 12vh;
+}
+.sprinkle:nth-of-type(3){
+  top: 4vh;
+  left: 14vh;
+}
+.sprinkle:nth-of-type(4){
+  top: 14vh;
+  left: 14vh;
+}
+.sprinkle:nth-of-type(5){
+  top: 15vh;
+  left: 18vh;
+}
+.sprinkle:nth-of-type(6){
+  top: 9vh;
+  left: 20vh;
+}
+.sprinkle:nth-of-type(7){
+  top: 15vh;
+  left: 6vh;
+}
+
+.sprinkle--rotate{ transform: rotateZ(-35deg); }
+.sprinkle--blue{ background: #00b1b7; }
+.sprinkle--pink{ background: #C7703A; }
+.sprinkle--purple{ background: #a07ccd; }
+
+.bottom-shadow{
+ width: 12vh;
+  height: 4vh;
+  position: absolute;
+  bottom: 1.5vh;
+  left: calc(50% - 6vh);
+
+  background: black;
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: 2s bottom-shadow ease-out infinite alternate;
+
+}
+
+@keyframes bottom-shadow {
+  0%, 90%{
+      opacity: .3;
+      transform: translateY(0vh) scale(.98);
+  }
+  100%{
+      transform: translateY(5vh) scale(.95);
+      opacity: .1;
+  }
+}
+@keyframes eye {
+  0%, 45%{ transform: translateX(0vh);}
+  50%, 95%{ transform: translateX(1.25vh);}
+}
+@keyframes mouth {
+  0%, 80%{
+      border: 1.5vh solid #ff2a7b;
+      border-bottom: 0;
+  }
+  100%{
+      border: 1.5vh solid #ff2a7b;
+  }
+}
+
+@keyframes shake {
+  0%{ transform: translateY(-1px); }
+  100%{ transform: translateY(1px);}
+}
+@keyframes jump {
+  0%, 90%{
+      transform: translateY(2vh) scale(1);
+  }
+  100%{
+      transform: translateY(-3vh) scale(.95);
+  }
+}
+@keyframes move {
+  0%{
+      transform: translateY(0) rotateZ(35deg);
+      opacity: 0;
+  }
+  10% ,90%{
+      opacity: .35;
+  }
+  100%{
+      transform: translateY(35vh) rotateZ(-35deg);
+      opacity: 0;
+  }
+}
+
+
+/*  */
+
+
+
 .App {
   text-align: center;
 }
@@ -52,6 +371,7 @@
   max-height: 200px;
   max-width: 200px;
 }
+
 
 .cupcake-container{
   display: grid;
@@ -501,35 +821,17 @@ input[type]:focus {
 .bg-img {
   width: 400px;
   height: 400px;
+}
   
 
-  &:before {
-    content: "";
-		position: absolute;
-		top: 30px;
-		right: -60px;
-		bottom:0;
-		left: 0;
-		background-image: linear-gradient(to bottom right, teal, #f4f4f4);
-    z-index:3;
-		opacity: .4; 
-	  width: 400px;
-    height: 400px;
-	  margin:auto;
-	  align-content: center;
-	  margin-top: 50px;
-   -moz-box-shadow:    inset 0 0 10px #4C4C4C;
-   -webkit-box-shadow: inset 0 0 10px #4C4C4C;
-   box-shadow:         inset 0 0 10px #4C4C4C;	    
-  }
-}
+  
 
 /* Handwritten Text at the bottom of your polaroid ---------- */
 .text{
   font-family: 'Amatic SC', cursive;
-  font-size:65px;
+  font-size:35px;
   color:#000;
-  margin-top:420px;
+  margin-top:200px;
   padding:auto;
 }
 

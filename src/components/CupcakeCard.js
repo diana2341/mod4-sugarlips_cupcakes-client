@@ -1,4 +1,6 @@
 import React from 'react'
+import CssCupcake from './CssCupcake'
+
 class CupcakeCard extends React.Component {
 
     
@@ -8,11 +10,13 @@ class CupcakeCard extends React.Component {
       return(
         <div className="bg-img">
    <div  className="cupcake-card">
-     <img className="cupcake-img" src={image} alt={name}/>
+     {/* <img className="cupcake-img" src={image} alt={name}/> */}
      <div className="card-info">
+             <CssCupcake />
+
      <br/>
 
-         <h3>#{name}</h3>
+         <h3 className="text">#{name}</h3>
          
          {/* <h3>{flavor}</h3> */}
          {/* add to cupcake profile */}
