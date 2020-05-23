@@ -3,7 +3,7 @@
    /* border: 1px solid rgba(0, 0, 0, 0.8); */
    content: "";
    /* position: absolute; */
-   margin-left: 2em;
+   margin-left: 1.7em;
  margin-top: -1em;
   height: 30vh;
   width: 30vh;
@@ -658,7 +658,7 @@ input[type]:focus {
 
 
 /* .for login */
-/* .login {margin-top: 30px;}
+.login {margin-top: 30px;}
 #login p {
   font-size: 80%;
 }  
@@ -669,7 +669,7 @@ input[type]:focus {
   color:#96CDDC;
   cursor: pointer;
 } 
-#login span:hover{color:#96CDDC;} */
+#login span:hover{color:#96CDDC;}
 
  
 
@@ -836,4 +836,205 @@ input[type]:focus {
   padding:auto;
 }
 
- 
+ /* profile paage */
+
+ .card-profile {
+  --card-bg-color: hsla(315, 68%, 73%, 0.856);
+  --card-bg-color-transparent: hsla(314, 22%, 26%, 0.192);
+  position: relative;
+  width: 300px;
+ }
+
+  .card-borders {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+    .border-top {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--card-bg-color);
+      transform: translateX(-100%);
+      animation: slide-in-horizontal 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    }
+
+    .border-right {
+      position: absolute;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--card-bg-color);
+      transform: translateY(100%);
+      animation: slide-in-vertical 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    }
+
+    .border-bottom {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--card-bg-color);
+      transform: translateX(100%);
+      animation: slide-in-horizontal-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    }
+
+    .border-left {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--card-bg-color);
+      transform: translateY(-100%);
+      animation: slide-in-vertical-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    }
+  
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 40px 0;
+    font-family: Lato, sans-serif;
+    background: var(--card-bg-color-transparent);
+    box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.028),
+      0 0px 1.3px rgba(0, 0, 0, 0.04),
+      0 0px 2.5px rgba(0, 0, 0, 0.05),
+      0 0px 4.5px rgba(0, 0, 0, 0.06),
+      0 0px 8.4px rgba(0, 0, 0, 0.072),
+      0 0px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.6);
+    animation: bump-in 0.5s 0.8s forwards;
+  }
+
+  .profileImg{
+    bottom: 2em;
+    z-index:3;
+    position:relative;
+    border-radius:100%;
+    width:120px;
+    height:120px;
+    border:2px solid #0f9ff9;
+    overflow:hidden ;
+    margin:0 auto;
+    text-align:center;     
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);      
+           
+   }
+
+    .username {
+      position: relative;
+      font-size: 26px;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      color: transparent;
+      animation: fill-text-white 1.2s 2s forwards;
+    }
+
+      .username::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: black;
+        background: #35b9f1;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: slide-in-out 1.2s 1.2s cubic-bezier(0.75, 0, 0, 1) forwards;
+      }
+    
+
+    
+
+@keyframes bump-in {
+  50% {
+    transform: scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-horizontal {
+  50% {
+    transform: translateX(0);
+  }
+
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-in-horizontal-reverse {
+  50% {
+    transform: translateX(0);
+  }
+
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-vertical {
+
+  50% {
+    transform: translateY(0);
+  }
+
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-in-vertical-reverse {
+
+  50% {
+    transform: translateY(0);
+  }
+
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-in-out {
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes fill-text-white {
+  to {
+    color: white;
+  }
+}
+
+@keyframes scale-in {
+  to {
+    transform: scale(1);
+  }
+}
