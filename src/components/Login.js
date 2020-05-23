@@ -26,7 +26,11 @@ const Login = props => {
         </div>
             
         <a 
-          onClick={event => handleLoginSubmit(event, username)}
+          onClick={event => {
+            handleLoginSubmit(event, username)
+            props.history.push('/cupcakes') 
+            }
+          }
           href="">
           <span></span>
           <span></span>

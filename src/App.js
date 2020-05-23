@@ -102,7 +102,8 @@ class App extends Component {
           username={this.state.username}
           password={this.state.password}
           handleChange={this.handleChange}
-          handleSignupSubmit={this.handleSignupSubmit} />} 
+          handleSignupSubmit={this.handleSignupSubmit} 
+          {...routerProps} />} 
         />
         <Route 
           path="/edit-profile" 
