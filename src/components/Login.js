@@ -32,7 +32,7 @@ export default class Login extends Component {
   <div className="card">
     <div className="about-login">
       <h1>Login</h1>
-      <p>Welcome Back Friend!!</p>
+      <p>Welcome Back Sugar Friend!!</p>
  </div>
   <form autoComplete="off" onSubmit={this.handleSubmit}>
       <div className="inputs-login">

@@ -134,7 +134,7 @@ const Form = props => {
     <div className="about">
       <h1>Sign up</h1>
 {/* <!--       <h2>oDsoky .<span>inc</span></h2> --> */}
-      <p>Join Our Community</p>
+      <p>Join Our Sugar lips Community</p>
     </div>
     <form autoComplete="off">
 

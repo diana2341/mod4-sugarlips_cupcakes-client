@@ -357,7 +357,7 @@ input[type]:focus {
   margin: 10px auto 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  background: rgba(0,0,0,0.07) 73%);
+  /* background: rgba(0,0,0,0.07) 73%); */
   text-align: center;
   border-radius: 5px;
   position: relative;
@@ -367,7 +367,7 @@ input[type]:focus {
    width: 40%;
   height: 100%;
   float: left;
-  background: url(https://66.media.tumblr.com/d8ba5f7342bb2fd3be5bec7677c1301e/tumblr_oiwxnu4FHD1skw17ko1_r1_1280.gifv);
+  background: url(https://data.whicdn.com/images/259181962/original.gif);
   background-size: cover;
   color: #649DAD;
 /*   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
@@ -380,9 +380,9 @@ input[type]:focus {
 
 }
 .about-login p {
-  margin-top: 250px;
+  margin-top: 270px;
   border-style: transparent;
-  background-color: #FDB6C8;
+  background-color: #FEDBDB;
   border-width: thick;
   height: 30px;
 
@@ -395,7 +395,7 @@ input[type]:focus {
   width: 40%;
  height: 100%;
  float: left;
- background: url(https://i.pinimg.com/736x/0a/ae/e3/0aaee35712f512b9feff73d528636a6f.jpg);
+ background: url(https://data.whicdn.com/images/259181962/original.gif);
  background-size: cover;
  color: #649DAD;
 /*   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
