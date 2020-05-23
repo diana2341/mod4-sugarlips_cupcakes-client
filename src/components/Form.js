@@ -7,7 +7,7 @@ const Form = props => {
     firstName, lastName, address1, address2, city, state, zipcode, phoneNumber, creditCard
   } = props.form
 
-  const {handleChange} = props
+  const {handleFormChange} = props
 
   return (
     <div>
@@ -24,7 +24,7 @@ const Form = props => {
           <div className="inputs">
           {/* <!--  <i class="fa fa-envelope-o" aria-hidden="true"></i> --> */}
             <input 
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="firstName" 
               value={firstName}
@@ -32,14 +32,14 @@ const Form = props => {
               required
             />
             <input 
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="lastName" 
               value={lastName}
               placeholder="Last Name"
             />
             <input 
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="address1" 
               value={address1}
@@ -47,21 +47,21 @@ const Form = props => {
               required
             />
             <input
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="address2" 
               value={address2} 
               placeholder="Address 2 (optional)"
             />
             <input 
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="city" 
               value={city}
               placeholder="City"
             />
             <input  
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="zipcode" 
               value={zipcode}
@@ -69,14 +69,14 @@ const Form = props => {
              required
             />
             <input 
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="creditCard" 
               value={creditCard}
               placeholder="Credit card" 
             />
             <input   
-              onChange={handleChange} 
+              onChange={handleFormChange} 
               type="text" 
               name="phoneNumber" 
               value={phoneNumber} 
@@ -87,7 +87,7 @@ const Form = props => {
             <label>State: </label>
             <select 
               className="select" 
-              onChange={handleChange}
+              onChange={handleFormChange}
               name="state"
               value="state"
             >
@@ -147,7 +147,7 @@ const Form = props => {
             <button className="submit">SIGN UP</button>
 
             <div className="login">
-              <label id="login" ><p> Already a member! <Link to="/log-in"><span>Login</span></Link></p></label> 
+              <label id="login" ><p> Already a member! <Link to="/login"><span>Login</span></Link></p></label> 
             </div>
           </form> 
         </div>

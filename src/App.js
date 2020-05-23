@@ -101,9 +101,11 @@ class App extends Component {
         <Route 
           path="/signup" 
           render={(routerProps) => <Signup 
+          form={this.state.form}
           username={this.state.username}
           password={this.state.password}
           handleChange={this.handleChange}
+          handleFormChange={this.handleFormChange}
           handleSignupSubmit={this.handleSignupSubmit} 
           {...routerProps} />} 
         />

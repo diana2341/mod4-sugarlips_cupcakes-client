@@ -12,7 +12,7 @@ const Login = props => {
           <h1>Login</h1>
           <p>Welcome Back Sugar Friend!!</p>
         </div>
-    
+
         <form autoComplete="off">
           <div className="inputs-login">
             <input 
@@ -22,14 +22,14 @@ const Login = props => {
               onChange={handleChange}  
               placeholder="enter username" 
               required /><br/>
-  
+
             <input 
               type="password" 
               name="password" 
               placeholder="enter password" 
               required/>
           </div>
-    
+
           <button
             onClick={event => { 
               handleLoginSubmit(event, username)
@@ -38,9 +38,9 @@ const Login = props => {
             }
             className="submit-login"
           >Login</button>
-  
+
           <div className="login-to">
-            <label id="login-to" ><p> Not a member? <Link to="/ sign-up"><span>Hurry   sign up!</span></Link></p></label> 
+            <label id="login-to" ><p> Not a member? <Link to="/ signup"><span>Hurry sign up!</span></Link></p></label> 
           </div>  
         </form>
       </div>
