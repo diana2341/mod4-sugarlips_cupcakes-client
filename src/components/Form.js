@@ -15,14 +15,12 @@ const Form = props => {
       <div className="con">
         <div className="card">
           <div className="about">
-            <h1>Sign up</h1>
-            {/* <!--       <h2>oDsoky .<span>inc</span></h2> --> */}
-            <p>Join Our Sugar lips Community</p>
+            <h1 className="text-c">Sign up</h1>
+            <p className="text-c">Join Our Sugar lips Community</p>
           </div>
           <form autoComplete="off">
 
           <div className="inputs">
-          {/* <!--  <i class="fa fa-envelope-o" aria-hidden="true"></i> --> */}
             <input 
               onChange={handleFormChange} 
               type="text" 
@@ -39,6 +37,7 @@ const Form = props => {
               placeholder="Last Name"
             />
             <input 
+            
               onChange={handleFormChange} 
               type="text" 
               name="address1" 
@@ -84,7 +83,7 @@ const Form = props => {
               required
             /><br/>
 
-            <label>State: </label>
+            <label className="text-c">State: </label>
             <select 
               className="select" 
               onChange={handleFormChange}
@@ -144,10 +143,10 @@ const Form = props => {
               <option value="WY">WY</option>
             </select><br />   
           </div>
-            <button className="submit">SIGN UP</button>
+            <button  className="submit ">SIGN UP</button>
 
             <div className="login">
-              <label id="login" ><p> Already a member! <Link to="/login"><span>Login</span></Link></p></label> 
+              <label id="login" ><p className="text-c"> Already a member! <Link to="/login"><span>Login</span></Link></p></label> 
             </div>
           </form> 
         </div>

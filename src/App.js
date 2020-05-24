@@ -8,6 +8,7 @@ import EditProfile from './components/EditProfile'
 import CupcakeContainer from './components/CupcakeContainer'
 import Login from './components/Login'
 import CssCupcake from './components/CssCupcake'
+import CupcakeProfile from './components/CupcakeProfile'
 
 
 
@@ -92,14 +93,15 @@ class App extends Component {
 
   render() {
     return (
+     
       <div className="App">
         <Route 
-          path="/profile" 
+          exact path="/profile" 
           render={(routerProps) => <Profile 
           currentUser={this.state.currentUser} />} 
         />
         <Route 
-          path="/signup" 
+          exact path="/signup" 
           render={(routerProps) => <Signup 
           form={this.state.form}
           username={this.state.username}
@@ -110,14 +112,14 @@ class App extends Component {
           {...routerProps} />} 
         />
         <Route 
-          path="/edit-profile" 
+          exact path="/edit-profile" 
           render={(routerProps) => <EditProfile 
           form={this.state.form}
           handleFormChange={this.handleFormChange} />} 
         />
         <Route 
-          path="/cupcakes" 
-          render={() => <CupcakeContainer />}
+          exact path="/cupcakes" 
+          render={(routerProps) => <CupcakeContainer {...routerProps}/>}
         />
         <Route 
           exact path="/login" 
@@ -136,6 +138,11 @@ class App extends Component {
           exact path="/animation" 
           render={() => <CssCupcake />}
         />
+        <Route 
+          exact path="/cupcakes/:id" 
+          render={(routerProps) => <CupcakeProfile {...routerProps}/>}
+        />
+
       </div>
     )
   }

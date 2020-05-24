@@ -316,47 +316,6 @@ left: 17.5vh
 /*  */
 
 
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 /* cupcake css */
 .cupcake-card{
   background-color:  rgba(223, 211, 211, 0.356) ;
@@ -382,100 +341,6 @@ left: 17.5vh
   grid-gap: 10px;
 
 }
-
-/* login */
-/* .login-box {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 400px;
-	padding: 40px;
-	transform: translate(-50%, -50%);
-	background: rgba(0,0,0,.5);
-	box-sizing: border-box;
-	box-shadow: 0 15px 25px rgba(0,0,0,.6);
-	border-radius: 10px;
-}
-
-.login-box h2 {
-	margin: 0 0 30px;
-	padding: 0;
-	color: #F1EEE6;
-	text-align: center;
-}
-
-.login-box .user-box {
-	position: relative;
-}
-
-.login-box .user-box input {
-	width: 100%;
-	padding: 10px 0;
-	font-size: 16px;
-	color: #F1EEE6;
-	margin-bottom: 30px;
-	border: none;
-	border-bottom: 1px solid #F1EEE6;
-	outline: none;
-	background: transparent;
-}
-
-.login-box .user-box label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 10px 0;
-	font-size: 16px;
-	color: #F1EEE6;
-	pointer-events: none;
-	transition: .5s;
-}
-
-/* .login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
-	top: -20px; 
-	left: 0px; 
-	color: #03E9F4;
-	font-size: 12px;
-} */
-
-
-/* .login-box form a {
-	position: relative;
-	display: inline-block;
-	padding: 10px 20px;
-	color: #03E9F4;
-	font-size: 16px;
-	text-decoration: none;
-	text-transform: uppercase;
-	overflow: hidden;
-	transition: .5s;
-	margin-top: 40px;
-	letter-spacing: 4px;
-} */
-
-/* .login-box form a:hover {
-	background: #03E9F4;
-	color: #F1EEE6;
-	border-radius: 5px;
-	box-shadow: 0 0 5px #03E9F4,
-							 0 0 25px #03E9F4,
-							 0 0 50px #03E9F4,
-							 0 0 100px #03E9F4;
-} */
-/* .login-box form input[type="submit"] {
-  background: rgba(217, 236, 208, 0.966);
-  border: 0;
-  width: 100%;
-  height: 40px;
-  border-radius: 3px;
-  color: rgb(29, 17, 17);
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.login-box form input[type="submit"]:hover {
-  background: #cf618f;
-}  */
 
 /* navbar */
 @import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
@@ -583,9 +448,12 @@ font-family: 'Comfortaa', cursive;
 /* about p*/
 .about h1 {margin-top: 60px;}
 .about p {
-  margin-top: 250px;
+  margin-top: 230px;
   border-style: transparent;
   background-color: #FDCFCF;
+  border-width: thick;
+  height: 30px;
+
   
 }
 
@@ -703,7 +571,7 @@ input[type]:focus {
 
 }
 .about-login p {
-  margin-top: 270px;
+  margin-top: 255px;
   border-style: transparent;
   background-color: #FEDBDB;
   border-width: thick;
@@ -803,8 +671,9 @@ input[type]:focus {
 } 
 #login-t0 span:hover{color:#96CDDC;}
 
-/* poloroid */
+/* poloroid in index pageeee*/
 
+@import url('https://fonts.googleapis.com/css?family=Coiny');
 
 .bg-img {
   border: 30px solid #eeeeee;
@@ -830,13 +699,230 @@ input[type]:focus {
 /* Handwritten Text at the bottom of your polaroid ---------- */
 .text{
   font-family: 'Amatic SC', cursive;
-  font-size:35px;
+  font-size:30px;
   color:#000;
   margin-top:200px;
   padding:auto;
+  overflow: visible;
 }
 
- /* profile paage ===========================*/
+/* poloroid for cupcake profile pageeeeeee */
+.bg-img-cupcake-profile {
+ margin-left: 9em;
+  border: 30px solid #eeeeee;
+  border-bottom: 135px solid #eeeeee;
+  border-width:100%;
+  margin-top: 1em;
+  border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
+   z-index: 9.0;
+  -webkit-box-shadow: 15px 15px 15px #777;
+  -moz-box-shadow: 13px 13px 13px #777;
+  box-shadow: 10px 8px 50px #000;
+}
+
+
+.bg-img-cupcake-profile {
+  width: 500px;
+  height: 500px;
+}
+.text-cupcake-profile{
+  font-family: 'Amatic SC', cursive;
+  font-size:35px;
+  color:#000;
+  margin-top:60px;
+  padding:auto;
+}
+.cupcake-img-cupcake-profile{
+  max-height: 300px;
+  max-width: 400px;
+
+ /* opacity: 0.8; */
+  /* box-shadow: 0 0 10px 5px #FDCFCF; */
+  /* box-shadow:  14px -3px 149px 36px  rgb(201, 189, 189) ; */
+  
+
+
+  
+
+}
+
+.cupcake-card-cupcake-profile{
+  background-color:  rgba(223, 211, 211, 0.356) ;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  
+  
+}
+.cupcake-info{
+  position: absolute;
+   /* border:2px solid #0f9ff9; */
+   left: 50em;
+   top: 15em;
+   max-width: 500px;
+
+
+
+}
+.cupcake-name{
+position: relative;
+text-align: center;
+margin-top: 0em;
+font-family: 'Coiny';font-size: 40px;
+text-decoration: underline;
+
+
+}
+.text-c{
+  font-family: 'Coiny';
+
+}
+.addcart{
+  position: absolute;
+  left:-35em;
+  bottom:4.5em;
+  font-family: 'Coiny';
+
+}
+.cart{
+  position: absolute;
+  left:-35em;
+  bottom:6em
+
+}
+/* #buy{
+  position: absolute;
+  left:-15em;
+  bottom:3.5em
+} */
+
+
+
+
+.sprinkles {
+  position:absolute;
+  border-radius: 100vh;
+  z-index: 100;
+  animation: bounce-in-sprinkles 0.5s forwards;
+  box-shadow: 1.5vh 1.5vh 0 rgba(0, 0, 0, .25);
+}
+
+.one {
+  transform: rotate(60deg);
+  background-color: #e569a0;
+  top: 20%;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.two {
+  transform: rotate(-60deg);
+  background-color: #e569a0;
+  margin-top: 21%;
+  margin-left: 90%;
+  animation-delay: 1.5s;
+}
+
+.three {
+  transform: rotate(10deg);
+  background-color: #e569a0;
+  margin-top: 20%;
+  margin-left: 35%;
+  animation-delay: 1.25s;
+}
+
+.four {
+  transform: rotate(-30deg);
+  background-color:#e569a0;
+  margin-top: 40%;
+  margin-left: 85%;
+  animation-delay: 1s;
+}
+
+.five {
+  transform: rotate(67deg);
+  background-color: #e569a0;
+  margin-top: -5em;
+  margin-left: -5em;
+  animation-delay: 1.5s;
+}
+
+.six {
+  transform: rotate(90deg);
+  background-color: #e569a0;
+  margin-top: 40%;
+  margin-left: 5%;
+  animation-delay: 1.5s;
+}
+
+.seven {
+  transform: rotate(-45deg);
+  background-color: #e569a0;
+  margin-top: 40%;
+  margin-left: 30%;
+  animation-delay: 1.25s;
+}
+
+.eight {
+  transform: rotate(20deg);
+  background-color: #e569a0;
+  top: 90%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.nine {
+  transform: rotate(-120deg);
+  background-color: #e569a0;
+  top: 10%;
+  left: 990px;
+  animation-delay: 1.5s;
+}
+
+.ten {
+  transform: rotate(-10deg);
+  background-color: #e569a0;
+  top: 35em;
+  left: 50px;
+  animation-delay: 1s;
+}
+
+.eleven {
+  transform: rotate(50deg);
+  background-color: #e569a0;
+  top: 50%;
+  left: 100px;
+  animation-delay: 1.25s;
+}
+
+.twelve {
+  transform: rotate(-20deg);
+  background-color: #e569a0;
+  top: 20%;
+  left: 80em;
+  animation-delay: 1s;
+}
+
+@keyframes bounce-in-sprinkles {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    height: 7.66667vh;
+    width: 2.875vh;
+  }
+  100% {
+    height: 6.66667vh;
+    width: 2.5vh;
+  }
+}
+
+ /* profile human paage ===========================*/
 
  .card-profile {
   --card-bg-color: hsla(315, 68%, 73%, 0.856);
@@ -845,9 +931,9 @@ input[type]:focus {
 
   width: 700px;
   position: relative;
-  top: 10%;
+  top: 15%;
   left: 30%;
-  margin-top: 2em;
+  margin-top: 10em;
   margin-left: -50px;
   /* bottom: 0px; */
  height:auto;
