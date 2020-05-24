@@ -810,7 +810,7 @@ text-decoration: underline;
 
 .one {
   transform: rotate(60deg);
-  background-color: #e569a0;
+  background-color: #8a69e5;
   top: 20%;
   left: 40%;
   animation-delay: 1s;
@@ -826,7 +826,7 @@ text-decoration: underline;
 
 .three {
   transform: rotate(10deg);
-  background-color: #e569a0;
+  background-color: #dde569;
   margin-top: 20%;
   margin-left: 35%;
   animation-delay: 1.25s;
@@ -834,7 +834,7 @@ text-decoration: underline;
 
 .four {
   transform: rotate(-30deg);
-  background-color:#e569a0;
+  background-color:#4c1db9;
   margin-top: 40%;
   margin-left: 85%;
   animation-delay: 1s;
@@ -842,7 +842,7 @@ text-decoration: underline;
 
 .five {
   transform: rotate(67deg);
-  background-color: #e569a0;
+  background-color: #ec718c;
   margin-top: -5em;
   margin-left: -5em;
   animation-delay: 1.5s;
@@ -850,7 +850,7 @@ text-decoration: underline;
 
 .six {
   transform: rotate(90deg);
-  background-color: #e569a0;
+  background-color: #69e56f;
   margin-top: 40%;
   margin-left: 5%;
   animation-delay: 1.5s;
@@ -858,7 +858,7 @@ text-decoration: underline;
 
 .seven {
   transform: rotate(-45deg);
-  background-color: #e569a0;
+  background-color: #81b6f1;
   margin-top: 40%;
   margin-left: 30%;
   animation-delay: 1.25s;
@@ -866,14 +866,14 @@ text-decoration: underline;
 
 .eight {
   transform: rotate(20deg);
-  background-color: #e569a0;
+  background-color: #6e74c7;
   top: 90%;
   left: 70%;
   animation-delay: 1s;
 }
 .nine {
   transform: rotate(-120deg);
-  background-color: #e569a0;
+  background-color: #c167d8;
   top: 10%;
   left: 990px;
   animation-delay: 1.5s;
@@ -881,7 +881,7 @@ text-decoration: underline;
 
 .ten {
   transform: rotate(-10deg);
-  background-color: #e569a0;
+  background-color: #e2aa60;
   top: 35em;
   left: 50px;
   animation-delay: 1s;
@@ -889,7 +889,7 @@ text-decoration: underline;
 
 .eleven {
   transform: rotate(50deg);
-  background-color: #e569a0;
+  background-color: #c046b0;
   top: 50%;
   left: 100px;
   animation-delay: 1.25s;
