@@ -8,47 +8,46 @@ class CupcakeProfile extends React.Component {
     }
 
     componentDidMount() {
-        /** TODO: Make this dynamic! Use the id param of the URL to fetch the correct cat!  */
-
-        // let { allPets } = this.props
-        // allPets.find(pet => pet.id === parseInt(this.props.match.params.id) ) // 5 !== '5'
+ 
 
         fetch(`http://localhost:4000/cupcakes/${this.props.match.params.id}`)
             .then(res => res.json())
             .then(cupcakes => this.setState({cupcakes}))
     }
  render(){
-        console.log('Profile', this.state.cupcakes)
-        console.log(this.state.cupcakes.flavor)
-        const{flavor}=this.state.cupcakes
+       
+        const{flavor,name,image,price}=this.state.cupcakes
         return (
-            
-                <div className="pet-page">
-                    <h1>my cupcake</h1>
-                             <h3>{flavor}</h3>
+            // className="text-cupcake-profile" for italic #poloroid text
+    <div >
+         <h1 className="cupcake-name">{name}</h1>
+         <div className="bg-img-cupcake-profile">
+            <div  className="cupcake-card-cupcake-profile">
+            <img className="cupcake-img-cupcake-profile" src={image} alt={name}/>           
+            </div>
+        </div>
 
-                    {/* <img className="page-img" src={image ? image : 'https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697'} alt={name}/>
-                    <div className="page-info">
-                        <h2>{name}</h2>
-                        <div>How's {name} doing today? {happiness > 0 ? '❤️'.repeat(happiness) : '😿'}</div>
-                        <div><b>{name}</b> says {description}</div>
-                        <div className={isAdopted ? '' : 'highlight'}>{isAdopted ? 'No Longer up for Adoption' : 'Up for Adoption!'}</div>
-                    </div>
-                    <div>
-                        <span>⬅️</span>
-                        <span>➡️</span>
-                    </div>
-                    <button onClick={() => this.props.history.push('/pets')}>Go Back</button> */}
-                  
-                </div>
+        <div className="cupcake-info">
+            <h2 className="text-c">{flavor}</h2>
+            <p>
+            Cupcake ipsum dolor sit. Amet macaroon fruitcake jujubes gummi bears topping. Croissant toffee fruitcake jelly beans I love.
+
+Gummies cake danish apple pie oat cake I love icing carrot cake. I love jelly beans donut macaroon dragée dessert cotton candy cotton candy. Cheesecake I love croissant oat cake apple pie soufflé I love muffin. Gingerbread I love icing lollipop bonbon.
+
+Gingerbread brownie cookie oat cake chocolate bar I love. Halvah chocolate cake caramels chocolate cake muffin cheesecake dessert caramels muffin. Tootsie roll gummi bears pie apple pie brownie chocolate liquorice biscuit  
+            </p> 
+        <h3>${price}0</h3>
+                      
+        </div>
+                    
+    </div>
                 
 
         )
     }
 
    
-        // return this.state.pet ? this.renderPet() : <div> No Pet Selected... Try going back to our Pets! </div>
-    }
+ }
 
 
 export default CupcakeProfile;

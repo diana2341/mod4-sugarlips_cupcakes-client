@@ -9,8 +9,8 @@ const Login = props => {
     <div className="con">
       <div className="card">
         <div className="about-login">
-          <h1>Login</h1>
-          <p>Welcome Back Sugar Friend!!</p>
+          <h1 className="text-c">Login</h1>
+          <p className="text-c">Welcome Back Sugar Friend!!</p>
         </div>
 
         <form autoComplete="off">
@@ -40,7 +40,7 @@ const Login = props => {
           >Login</button>
 
           <div className="login-to">
-            <label id="login-to" ><p> Not a member? <Link to="/signup"><span>Hurry sign up!</span></Link></p></label> 
+            <label id="login-to" ><p className="text-c"> Not a member? <Link to="/signup"><span>Hurry sign up!</span></Link></p></label> 
           </div>  
         </form>
       </div>

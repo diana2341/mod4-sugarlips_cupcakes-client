@@ -14,9 +14,9 @@ const Navbar = () => {
         <Sort />
         <nav>
           <ul>
-            <li><Link to="/">Main page</Link></li>
-            <li><Link to="/signup">Sign up</Link></li>
-            <li><Link to="/profile">Account</Link></li>
+            <li ><Link className="text-c" to="/">Main page</Link></li>
+            <li ><Link className="text-c" to="/signup">Sign up</Link></li>
+            <li ><Link className="text-c" to="/profile">Account</Link></li>
             {/* <li><Link to="/">?</Link></li> */}
             {/* <li><Link to="/">?</Link></li> */}
           </ul>
