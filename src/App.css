@@ -768,7 +768,7 @@ input[type]:focus {
 .cupcake-name{
 position: relative;
 text-align: center;
-margin-top: 2em;
+margin-top: 0em;
 font-family: 'Coiny';font-size: 40px;
 text-decoration: underline;
 
@@ -782,7 +782,7 @@ text-decoration: underline;
 
 
 
-.sprinkle {
+.sprinkles {
   position:absolute;
   border-radius: 100vh;
   z-index: 100;
@@ -801,8 +801,8 @@ text-decoration: underline;
 .two {
   transform: rotate(-60deg);
   background-color: #e569a0;
-  margin-top: 11%;
-  margin-left: 7%;
+  margin-top: 21%;
+  margin-left: 90%;
   animation-delay: 1.5s;
 }
 
@@ -810,23 +810,23 @@ text-decoration: underline;
   transform: rotate(10deg);
   background-color: #e569a0;
   margin-top: 20%;
-  margin-left: 44%;
+  margin-left: 35%;
   animation-delay: 1.25s;
 }
 
 .four {
   transform: rotate(-30deg);
   background-color:#e569a0;
-  margin-top: 30%;
-  margin-left: 20%;
+  margin-top: 40%;
+  margin-left: 85%;
   animation-delay: 1s;
 }
 
 .five {
   transform: rotate(67deg);
   background-color: #e569a0;
-  margin-top: 30%;
-  margin-left: 7%;
+  margin-top: -5em;
+  margin-left: -5em;
   animation-delay: 1.5s;
 }
 
@@ -841,7 +841,7 @@ text-decoration: underline;
 .seven {
   transform: rotate(-45deg);
   background-color: #e569a0;
-  margin-top: 30%;
+  margin-top: 40%;
   margin-left: 30%;
   animation-delay: 1.25s;
 }
@@ -849,39 +849,39 @@ text-decoration: underline;
 .eight {
   transform: rotate(20deg);
   background-color: #e569a0;
-  top: 80%;
-  left: 50%;
+  top: 90%;
+  left: 70%;
   animation-delay: 1s;
 }
 .nine {
   transform: rotate(-120deg);
   background-color: #e569a0;
-  top: 90%;
-  left: 590px;
+  top: 10%;
+  left: 990px;
   animation-delay: 1.5s;
 }
 
 .ten {
   transform: rotate(-10deg);
   background-color: #e569a0;
-  top: 35.5em;
-  left: 450px;
+  top: 35em;
+  left: 50px;
   animation-delay: 1s;
 }
 
 .eleven {
   transform: rotate(50deg);
   background-color: #e569a0;
-  top: 30%;
-  left: 200px;
+  top: 50%;
+  left: 100px;
   animation-delay: 1.25s;
 }
 
 .twelve {
   transform: rotate(-20deg);
   background-color: #e569a0;
-  top: 50%;
-  left: 150px;
+  top: 20%;
+  left: 80em;
   animation-delay: 1s;
 }
 

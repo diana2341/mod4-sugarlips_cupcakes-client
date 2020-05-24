@@ -18,7 +18,7 @@ const Profile = props => {
           </div>
 
         <div className="card-content">
-          <div className="profileImg"> <img src="https://cdn4.vectorstock.com/i/1000x1000/76/43/muffin-with-kawaii-face-design-vector-10657643.jpg" style={{"width":"110px"}}/>
+          <div className="profileImg"> <img src="https://cdn4.vectorstock.com/i/1000x1000/76/43/muffin-with-kawaii-face-design-vector-10657643.jpg" alt="img"style={{"width":"110px"}}/>
           </div>
        
         <h2 className="username">{firstName} {lastName}</h2>

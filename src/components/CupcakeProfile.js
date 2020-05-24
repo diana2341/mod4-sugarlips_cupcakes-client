@@ -25,7 +25,7 @@ class CupcakeProfile extends React.Component {
          <div className="bg-img-cupcake-profile">
              {/* sprinkles generator :) */}
          {div.map(function(name, index){
-                    return <div key={ index } className={`sprinkle ${name}`}></div>;
+                    return <div key={ index } className={`sprinkles ${name}`}></div>;
                   })}
  
             <div  className="cupcake-card-cupcake-profile">

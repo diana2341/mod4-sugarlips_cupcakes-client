@@ -1,5 +1,5 @@
 import React from 'react'
-import cupcakes from "../cupcake_data";
+// import cupcakes from "../cupcake_data";
 import CupcakeCard from "./CupcakeCard";
 import Navbar from './Navbar'
 
