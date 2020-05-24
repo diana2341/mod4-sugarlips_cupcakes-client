@@ -699,14 +699,16 @@ input[type]:focus {
 /* Handwritten Text at the bottom of your polaroid ---------- */
 .text{
   font-family: 'Amatic SC', cursive;
-  font-size:35px;
+  font-size:30px;
   color:#000;
   margin-top:200px;
   padding:auto;
+  overflow: visible;
 }
 
 /* poloroid for cupcake profile pageeeeeee */
 .bg-img-cupcake-profile {
+ margin-left: 9em;
   border: 30px solid #eeeeee;
   border-bottom: 135px solid #eeeeee;
   border-width:100%;
@@ -732,8 +734,18 @@ input[type]:focus {
 }
 .cupcake-img-cupcake-profile{
   max-height: 300px;
-  max-width: 300px;
+  max-width: 400px;
+
+ /* opacity: 0.8; */
+  /* box-shadow: 0 0 10px 5px #FDCFCF; */
+  /* box-shadow:  14px -3px 149px 36px  rgb(201, 189, 189) ; */
+  
+
+
+  
+
 }
+
 .cupcake-card-cupcake-profile{
   background-color:  rgba(223, 211, 211, 0.356) ;
   /* border: 1px solid rgba(0, 0, 0, 0.8); */
@@ -741,13 +753,14 @@ input[type]:focus {
   font-size: 30px;
   text-align: center;
   
+  
 }
 .cupcake-info{
-  position: relative;
-   border:2px solid #0f9ff9;
-   left: 35em;
-   bottom: 30em;
-   max-width: 300px;
+  position: absolute;
+   /* border:2px solid #0f9ff9; */
+   left: 50em;
+   top: 15em;
+   max-width: 500px;
 
 
 
@@ -764,6 +777,131 @@ text-decoration: underline;
 .text-c{
   font-family: 'Coiny';
 
+}
+
+
+
+
+.sprinkle {
+  position:absolute;
+  border-radius: 100vh;
+  z-index: 100;
+  animation: bounce-in-sprinkles 0.5s forwards;
+  box-shadow: 1.5vh 1.5vh 0 rgba(0, 0, 0, .25);
+}
+
+.one {
+  transform: rotate(60deg);
+  background-color: #e569a0;
+  top: 20%;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.two {
+  transform: rotate(-60deg);
+  background-color: #e569a0;
+  margin-top: 11%;
+  margin-left: 7%;
+  animation-delay: 1.5s;
+}
+
+.three {
+  transform: rotate(10deg);
+  background-color: #e569a0;
+  margin-top: 20%;
+  margin-left: 44%;
+  animation-delay: 1.25s;
+}
+
+.four {
+  transform: rotate(-30deg);
+  background-color:#e569a0;
+  margin-top: 30%;
+  margin-left: 20%;
+  animation-delay: 1s;
+}
+
+.five {
+  transform: rotate(67deg);
+  background-color: #e569a0;
+  margin-top: 30%;
+  margin-left: 7%;
+  animation-delay: 1.5s;
+}
+
+.six {
+  transform: rotate(90deg);
+  background-color: #e569a0;
+  margin-top: 40%;
+  margin-left: 5%;
+  animation-delay: 1.5s;
+}
+
+.seven {
+  transform: rotate(-45deg);
+  background-color: #e569a0;
+  margin-top: 30%;
+  margin-left: 30%;
+  animation-delay: 1.25s;
+}
+
+.eight {
+  transform: rotate(20deg);
+  background-color: #e569a0;
+  top: 80%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.nine {
+  transform: rotate(-120deg);
+  background-color: #e569a0;
+  top: 90%;
+  left: 590px;
+  animation-delay: 1.5s;
+}
+
+.ten {
+  transform: rotate(-10deg);
+  background-color: #e569a0;
+  top: 35.5em;
+  left: 450px;
+  animation-delay: 1s;
+}
+
+.eleven {
+  transform: rotate(50deg);
+  background-color: #e569a0;
+  top: 30%;
+  left: 200px;
+  animation-delay: 1.25s;
+}
+
+.twelve {
+  transform: rotate(-20deg);
+  background-color: #e569a0;
+  top: 50%;
+  left: 150px;
+  animation-delay: 1s;
+}
+
+@keyframes bounce-in-sprinkles {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    height: 7.66667vh;
+    width: 2.875vh;
+  }
+  100% {
+    height: 6.66667vh;
+    width: 2.5vh;
+  }
 }
 
  /* profile human paage ===========================*/
