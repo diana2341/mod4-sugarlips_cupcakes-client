@@ -5,8 +5,9 @@ class CupcakeCard extends React.Component {
 
     
     render() {
-        // console.log(this.props)
-        const{name,flavor,image}=this.props.cupcakes
+        console.log(this.props)
+        const{name,flavor,image,id}=this.props.cupcakes
+
       return(
         <div className="bg-img">
    <div  className="cupcake-card">
@@ -20,6 +21,8 @@ class CupcakeCard extends React.Component {
          
          {/* <h3>{flavor}</h3> */}
          {/* add to cupcake profile */}
+         <button onClick={() => this.props.history.push(`/cupcakes/${id}`)}>Visit {name}!</button>
+
            
      </div>
     </div>

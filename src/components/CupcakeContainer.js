@@ -20,13 +20,13 @@ fetch('http://localhost:4000/cupcakes')
   }
 
   render() {
-      console.log(this.state.cupcakes)
+      console.log(this.props)
     return( 
       <div>
         <Navbar />
         <div className="cupcake-container">
-          { this.state.cupcakes.map((cupcake,index)=>{
-              return <CupcakeCard key={index} cupcakes={cupcake}/>})
+          { this.state.cupcakes.map((cupcake)=>{
+              return <CupcakeCard key={cupcake.id} cupcakes={cupcake}{...this.props}/>})
           }
         </div>
       </div>
