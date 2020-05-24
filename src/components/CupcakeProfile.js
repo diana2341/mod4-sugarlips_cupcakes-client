@@ -44,8 +44,9 @@ Gummies cake danish apple pie oat cake I love icing carrot cake. I love jelly be
 
 Gingerbread brownie cookie oat cake chocolate bar I love. Halvah chocolate cake caramels chocolate cake muffin cheesecake dessert caramels muffin. Tootsie roll gummi bears pie apple pie brownie chocolate liquorice biscuit  
             </p> <br/>
-        <h2 className="text-c">${price}0</h2>
-                      
+        <h2 id ="buy"className="text-c">${price}0</h2>
+        <label className="addcart" >Add to cart</label>
+        <img className="cart" src="https://img.icons8.com/dusk/64/000000/shopping-cart-loaded.png" alt="cart"/>
         </div>
                     
     </div>

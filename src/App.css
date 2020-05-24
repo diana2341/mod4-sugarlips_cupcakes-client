@@ -778,6 +778,24 @@ text-decoration: underline;
   font-family: 'Coiny';
 
 }
+.addcart{
+  position: absolute;
+  left:-35em;
+  bottom:4.5em;
+  font-family: 'Coiny';
+
+}
+.cart{
+  position: absolute;
+  left:-35em;
+  bottom:6em
+
+}
+/* #buy{
+  position: absolute;
+  left:-15em;
+  bottom:3.5em
+} */
 
 
 
