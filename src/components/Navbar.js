@@ -9,9 +9,12 @@ const Navbar = props => {
         <div className="logo">
           <a href='/cupcakes'><Link to="/cupcakes">Sugar Lipss</Link> </a>
         </div>
-        {React.cloneElement(props.search, { searchName: props.searchName, handleSearchName: props.handleSearchName })}
-
-        {React.cloneElement(props.sort, { sortBy: props.sortBy, handleSortBy: props.handleSortBy})}
+        { props.search ? 
+          React.cloneElement(props.search, { searchName: props.searchName, handleSearchName: props.handleSearchName }) 
+          : null }
+        { props.sort ? 
+          React.cloneElement(props.sort, { sortBy: props.sortBy, handleSortBy: props.handleSortBy}) 
+          : null }
         
         <nav>
           <ul>
