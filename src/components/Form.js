@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 const Form = props => {
 
   const {
-    firstName, lastName, address1, address2, city, state, zipcode, phoneNumber, creditCard
+    username, password, first_name, last_name, address_1, address_2, city, state, zip_code, phone_number, credit_card
   } = props.form
 
-  const {handleFormChange} = props
+  const {form, handleFormChange, handleSignupSubmit, history} = props
 
   return (
     <div>
@@ -21,35 +22,50 @@ const Form = props => {
           <form autoComplete="off">
 
           <div className="inputs">
+            <input
+              onChange={handleFormChange}
+              type="text"
+              name="username"
+              value={username}
+              placeholder="Username"
+            />
+            <input
+              onChange={handleFormChange}
+              type="text"
+              name="password"
+              value={password}
+              placeholder="Password" 
+            />
+            <h3>Additional Information</h3>
             <input 
               onChange={handleFormChange} 
               type="text" 
-              name="firstName" 
-              value={firstName}
+              name="first_name" 
+              value={first_name}
               placeholder="First Name" 
               required
             />
             <input 
               onChange={handleFormChange} 
               type="text" 
-              name="lastName" 
-              value={lastName}
+              name="last_name" 
+              value={last_name}
               placeholder="Last Name"
             />
             <input 
             
               onChange={handleFormChange} 
               type="text" 
-              name="address1" 
-              value={address1}
+              name="address_1" 
+              value={address_1}
               placeholder="Adress 1"
               required
             />
             <input
               onChange={handleFormChange} 
               type="text" 
-              name="address2" 
-              value={address2} 
+              name="address_2" 
+              value={address_2} 
               placeholder="Address 2 (optional)"
             />
             <input 
@@ -62,23 +78,23 @@ const Form = props => {
             <input  
               onChange={handleFormChange} 
               type="text" 
-              name="zipcode" 
-              value={zipcode}
+              name="zip_code" 
+              value={zip_code}
               placeholder="Zipcode" 
              required
             />
             <input 
               onChange={handleFormChange} 
               type="text" 
-              name="creditCard" 
-              value={creditCard}
+              name="credit_card" 
+              value={credit_card}
               placeholder="Credit card" 
             />
             <input   
               onChange={handleFormChange} 
               type="text" 
-              name="phoneNumber" 
-              value={phoneNumber} 
+              name="phone_number" 
+              value={phone_number} 
               placeholder="Phone number"
               required
             /><br/>
@@ -88,7 +104,7 @@ const Form = props => {
               className="select" 
               onChange={handleFormChange}
               name="state"
-              value="state"
+              value={state}
             >
               <option>Select State</option>
               <option value="AL">AL</option>
@@ -143,7 +159,13 @@ const Form = props => {
               <option value="WY">WY</option>
             </select><br />   
           </div>
-            <button  className="submit ">SIGN UP</button>
+
+            <button 
+              onClick={event => {
+                handleSignupSubmit(event, form)
+                history.push('/cupcakes')
+                }}
+              className="submit ">SIGN UP</button>
 
             <div className="login">
               <label id="login" ><p className="text-c"> Already a member! <Link to="/login"><span>Login</span></Link></p></label> 

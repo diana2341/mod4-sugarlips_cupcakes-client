@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 const Login = props => {
 
-  const {handleChange, handleLoginSubmit, username} = props
+  const {handleChange, handleLoginSubmit, username, history} = props
 
   return (
     <div className="con">
@@ -33,7 +34,7 @@ const Login = props => {
           <button
             onClick={event => { 
               handleLoginSubmit(event, username)
-              props.history.push('/cupcakes') 
+              history.push('/cupcakes') 
               }
             }
             className="submit-login"

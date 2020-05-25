@@ -1,7 +1,6 @@
-
-
 import React from 'react'
 import Form from './Form'
+
 
 const Signup = props => {
 
@@ -10,9 +9,8 @@ const Signup = props => {
       <Form
         form={props.form}
         handleFormChange={props.handleFormChange}
-        username={props.username}
-        password={props.password}
-        handleSignupSubmit={props.handleSignupSubmit} 
+        handleSignupSubmit={props.handleSignupSubmit}
+        history={props.history} 
       />
     </div>
   )

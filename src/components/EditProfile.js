@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from './Form'
 
+
 const EditProfile = props => {
   
   const {form, handleChange} = props

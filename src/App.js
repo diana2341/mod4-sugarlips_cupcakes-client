@@ -9,36 +9,27 @@ import CupcakeContainer from './components/CupcakeContainer'
 import Login from './components/Login'
 import CssCupcake from './components/CssCupcake'
 import CupcakeProfile from './components/CupcakeProfile'
-
+import Search from './components/Search'
+import Sort from './components/Sort'
 
 
 class App extends Component {
 
   state = {
-    currentUser: {
-      firstName: "Uriel",
-      lastName: "Rodriguez",
-      address1: "39 Momar Drive",
-      address2: "private home",
-      city: "Bergenfield",
-      state: "NJ",
-      zipcode: "07621",
-      phoneNumber: "347-264-0904",
-      creditCard: "345465788909"
-    },
     form: {
-      firstName: "",
-      lastName: "",
-      address1: "",
-      address2: "",
+      username: "",
+      password: "",
+      first_name: "",
+      last_name: "",
+      address_1: "",
+      address_2: "",
       city: "",
       state: "",
-      zipcode: "",
-      phoneNumber: "",
-      creditCard: ""
+      zip_code: "",
+      phone_number: "",
+      credit_card: ""
     },
     username: '',
-    password: '',
     loggedInUser: {}
   }
 
@@ -51,7 +42,7 @@ class App extends Component {
   }
 
   loginUser = username => {
-    fetch(`http://localhost:3000/users/${username}`)
+    fetch(`http://localhost:4000/users/${username}`)
     .then(resp => resp.json())
     .then(user => this.setState({
       loggedInUser: user
@@ -59,8 +50,14 @@ class App extends Component {
     )
   }
 
+  logoutUser = () => {
+    this.setState({
+      loggedInUser: {}
+    })
+  }
+
   createNewUser = user => {
-    fetch(`http://localhost:3000/users`, {
+    fetch(`http://localhost:4000/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -97,37 +94,41 @@ class App extends Component {
       <div className="App">
         <Route 
           exact path="/profile" 
-          render={(routerProps) => <Profile 
-          currentUser={this.state.currentUser} />} 
+          render={(routerProps) => <Profile
+            loggedInUser={this.state.loggedInUser}
+            logoutUser={this.logoutUser}
+            {...routerProps} />} 
         />
         <Route 
           exact path="/signup" 
           render={(routerProps) => <Signup 
-          form={this.state.form}
-          username={this.state.username}
-          password={this.state.password}
-          handleChange={this.handleChange}
-          handleFormChange={this.handleFormChange}
-          handleSignupSubmit={this.handleSignupSubmit} 
-          {...routerProps} />} 
+            form={this.state.form}
+            handleFormChange={this.handleFormChange}
+            handleSignupSubmit={this.handleSignupSubmit} 
+            {...routerProps} />} 
         />
         <Route 
           exact path="/edit-profile" 
           render={(routerProps) => <EditProfile 
-          form={this.state.form}
-          handleFormChange={this.handleFormChange} />} 
+            form={this.state.form}
+            handleFormChange={this.handleFormChange} />} 
         />
         <Route 
           exact path="/cupcakes" 
-          render={(routerProps) => <CupcakeContainer {...routerProps}/>}
+          render={(routerProps) => <CupcakeContainer
+            loggedInUser={this.state.loggedInUser}
+            logoutUser={this.logoutUser} 
+            {...routerProps}
+            sort={<Sort />}
+            search={<Search />} />}
         />
         <Route 
           exact path="/login" 
           render={(routerProps) => <Login 
-          username={this.state.username}
-          handleChange={this.handleChange}
-          handleLoginSubmit={this.handleLoginSubmit}
-          {...routerProps} />} 
+            username={this.state.username}
+            handleChange={this.handleChange}
+            handleLoginSubmit={this.handleLoginSubmit}
+            {...routerProps} />} 
         />
         <Route 
           exact path="/" 
@@ -140,9 +141,9 @@ class App extends Component {
         />
         <Route 
           exact path="/cupcakes/:id" 
-          render={(routerProps) => <CupcakeProfile {...routerProps}/>}
+          render={(routerProps) => <CupcakeProfile 
+            {...routerProps} />}
         />
-
       </div>
     )
   }

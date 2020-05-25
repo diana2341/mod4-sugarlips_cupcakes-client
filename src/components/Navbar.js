@@ -1,22 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search from './Search'
-import Sort from './Sort'
 
-const Navbar = () => {
+
+const Navbar = props => {
   return (
     <div className="container">
       <header>
         <div className="logo">
           <a href='/cupcakes'><Link to="/cupcakes">Sugar Lipss</Link> </a>
         </div>
-        <Search />
-        <Sort />
+        {React.cloneElement(props.search, { searchName: props.searchName, handleSearchName: props.handleSearchName })}
+
+        {React.cloneElement(props.sort, { sortBy: props.sortBy, handleSortBy: props.handleSortBy})}
+        
         <nav>
           <ul>
-            <li ><Link className="text-c" to="/">Main page</Link></li>
-            <li ><Link className="text-c" to="/signup">Sign up</Link></li>
-            <li ><Link className="text-c" to="/profile">Account</Link></li>
+            { props.loggedInUser.username ? null : 
+              <>
+                <li >
+                  <Link 
+                    className="text-c" 
+                    to="/login">Log in</Link>
+                </li>
+                <li >
+                  <Link 
+                    className="text-c" 
+                    to="/signup">Sign up</Link>
+                </li>
+              </>
+            }
+            { props.loggedInUser.username ? 
+              <>
+                <li >
+                    { props.accountLink ? props.accountLink : null }
+                </li>
+                <li >
+                  <Link 
+                    onClick={props.logoutUser} 
+                    className="text-c" 
+                    to="/">Logout</Link>
+                </li>
+              </>
+             : null }
             {/* <li><Link to="/">?</Link></li> */}
             {/* <li><Link to="/">?</Link></li> */}
           </ul>
