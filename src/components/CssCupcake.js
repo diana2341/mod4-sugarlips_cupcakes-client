@@ -5,7 +5,6 @@ class CssCupcake extends React.Component {
   
 
   render() { 
-      
     return( 
         <div className ="cupcake">
         <div className="cupcake-body"></div>
@@ -20,9 +19,9 @@ class CssCupcake extends React.Component {
         
         
        <div className="frosting">
-              <div className="frosting__item"></div>
-              <div className="frosting__item"></div>
-              <div className="frosting__item"></div>
+              <div data-id={this.props.id} className="frosting__item"></div>
+              <div data-id={this.props.id} className="frosting__item"></div>
+              <div data-id={this.props.id} className="frosting__item"></div>
           </div>
         
          <div className="colors">
