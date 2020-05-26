@@ -380,20 +380,15 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 font-family: 'Comfortaa', cursive;
-/* background:
-radial-gradient(circle closest-side at 60% 43%, #FDCFCF 26%, rgba(187,0,51,0) 27%),
-radial-gradient(circle closest-side at 40% 43%, #FDCFCF 26%, rgba(187,0,51,0) 27%),
-radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
-
-radial-gradient(circle closest-side at 60% 43%, #FDCFCF 26%, rgba(187,0,51,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 43%, #FDCFCF 26%, rgba(187,0,51,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+background:
+linear-gradient(27deg, #FDCFCF 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #FDCFCF 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, rgb(248, 190, 190) 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, rgb(248, 190, 190) 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #FDCFCF 10px, transparent 10px),
+linear-gradient(#FDCFCF 25%, #FDCFCF 25%, #FDCFCF 50%, transparent 50%, transparent 75%, rgb(248, 190, 190) 75%,rgb(248, 190, 190));
 background-color: #FDCFCF;
-background-size:100px 100px; */
+background-size: 20px 20px;
 }
 
 .select{
@@ -1455,7 +1450,7 @@ background-color: rgba(248, 246, 246, 0.658);
 	}
 
 	100%{
-		box-shadow: 0 0 0 20px #F76E8C, 0 0 0 80px #F76E8C;
+		/* box-shadow: 0 0 0 20px rgba(247, 110, 140, 0.233), 0 0 0 80px rgba(247, 110, 140, 0.233) */
 	}
 }
 
