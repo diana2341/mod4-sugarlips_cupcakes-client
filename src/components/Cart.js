@@ -7,6 +7,7 @@ export default class Cart extends Component {
     const {cupcakesInCart} = this.props
     const {username} = this.props.loggedInUser
 
+    if (cupcakesInCart.length > 0 && username) {
     // array of prices of each cupcake to sum into a total value
     const cupcakesPrices = cupcakesInCart.map(cupcake => cupcake.price)
 
@@ -55,6 +56,7 @@ export default class Cart extends Component {
         })
       )
     }
+  
 
     return(
       <div>
@@ -62,8 +64,8 @@ export default class Cart extends Component {
           loggedInUser={this.props.loggedInUser} 
           logoutUser={this.props.logoutUser}
         />
-        <br /><br /><br /><br /><br /><br />
-        <h3>{username ? `${username}'s current Cart` : 'Log in to shop our cupcakes!' }</h3><br />
+        <br /><br /><br /><br /><br />
+        <h3>{username ? `${username}'s current Cart` : 'Log in to shop our cupcakes!'}</h3><br />
         {cupcakesInCart ? 
           <table>
             <thead>
@@ -75,11 +77,23 @@ export default class Cart extends Component {
               </tr>
             </thead>
             <tbody>
-              {renderCupcakeRows()} 
+              {cupcakesInCart ? renderCupcakeRows() : null} 
             </tbody>
           </table>
         : null }
-        <h3>{ cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null }</h3>
+        <h3>{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3>
+      </div>
+    )
+  }
+
+    return(
+      <div>
+        <CartNavbar 
+          loggedInUser={this.props.loggedInUser} 
+          logoutUser={this.props.logoutUser}
+        />
+        <br /><br /><br /><br /><br />
+        <h3>Your cart is empty! Go buy some cupcakes!</h3><br />
       </div>
     )
   }
