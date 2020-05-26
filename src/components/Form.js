@@ -12,6 +12,8 @@ const Form = props => {
 
   return (
     <div>
+                  <h1 id="form-title" className="text-c">enter your information</h1>
+
       {/* <!-- card ui --> */}
       <div className="con">
         <div className="card">
@@ -19,7 +21,7 @@ const Form = props => {
             <h1 className="text-c">Sign up</h1>
             <p className="text-c">Join Our Sugar lips Community</p>
           </div>
-          <form autoComplete="off">
+          <form className="signupform"autoComplete="off">
 
           <div className="inputs">
             <input
@@ -36,7 +38,7 @@ const Form = props => {
               value={password}
               placeholder="Password" 
             />
-            <h3>Additional Information</h3>
+            {/* <h3>Additional Information</h3> */}
             <input 
               onChange={handleFormChange} 
               type="text" 
@@ -167,10 +169,13 @@ const Form = props => {
                 }}
               className="submit ">SIGN UP</button>
 
-            <div className="login">
-              <label id="login" ><p className="text-c"> Already a member! <Link to="/login"><span>Login</span></Link></p></label> 
-            </div>
-          </form> 
+            {/* <div className="login"> */}
+              <label id="login" ><p className="text-c"> Already a member! <Link to="/login"><span>Login</span></Link></p></label> <br/>
+            {/* </div> */}
+
+            
+          </form>
+           
         </div>
       </div>
     </div>

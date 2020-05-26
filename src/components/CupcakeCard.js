@@ -50,7 +50,7 @@ class CupcakeCard extends React.Component {
                 <CssCupcake id={id}/>
                 <br/>
                 <h3 className="text">#{name}</h3>
-                <button onClick={() => this.props.history.push(`/cupcakes/${id}`)}>Visit {name}!</button>
+                <button className="check-me " onClick={() => this.props.history.push(`/cupcakes/${id}`)}>Check me out!</button>
                 </div>
               </div>
          </div>
