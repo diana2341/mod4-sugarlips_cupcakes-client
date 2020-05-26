@@ -27,9 +27,10 @@ class HomePage extends React.Component {
       <div>
           <div className="center-entrance">
              <h1 className="text-c">Some only dream of cupcakes others make it happen</h1>
-              <button onClick={this.handClick}>enter</button>
+              <button className="enterbtn" onClick={this.handClick}>enter</button>
 
           </div>
+          
           <div className="stache">
                   <img className="mus" src={cp1} alt="cupcake"/>
         </div> 

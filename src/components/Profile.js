@@ -15,7 +15,6 @@ const Profile = props => {
           logoutUser={logoutUser}
         />
 
-         <h1>Profile Page</h1>
         <div class="card-profile">
           <div className="card-borders">
             <div className="border-top"></div>
@@ -23,6 +22,7 @@ const Profile = props => {
             <div className="border-bottom"></div>
             <div className="border-left"></div>
           </div>
+         <h1 className= "profile-titile">Profile Page</h1>
 
         <div className="card-content">
           <div className="profileImg"> <img src="https://cdn4.vectorstock.com/i/1000x1000/76/43/muffin-with-kawaii-face-design-vector-10657643.jpg" alt="img"style={{"width":"110px"}}/>
@@ -30,24 +30,24 @@ const Profile = props => {
        
         <h2 className="username">{first_name} {last_name}</h2>
         <div className="profile-information">
-          <h3>Address</h3>
+          <h3 className="your-info">Your information</h3><br/>
 
-          <p className="info-p" ><strong >Address 1:</strong> {address_1} </p><br/>
-          <p className="info-p"> <strong >Address 2:</strong> {address_2} </p><br/>
-          <p className="info-p"> <strong >city:</strong> {city} </p><br/>
-          <p className="info-p"> <strong >state:</strong>{state} </p><br/>
-          <p className="info-p"><strong >zipcode:</strong>{zip_code} </p><br/>
+          <p className="info-card" ><span className="info-label"  >Address 1:</span> {address_1} </p><br/>
+          <p className="info-card"> <span className="info-label" >Address 2:</span> {address_2} </p><br/>
+          <p className="info-card"> <span className="info-label" >city:</span> {city} </p><br/>
+          <p className="info-card"> <span className="info-label" >state:</span>{state} </p><br/>
+          <p className="info-card"><span className="info-label" >zipcode:</span>{zip_code} </p><br/>
 
-          <h3>Contact Information</h3>
-          {phone_number}
+          <p className="info-label"> Contact Information</p>
+          <p className="info-label">Phone number: <span className="info-card"> {phone_number}</span> </p><br/>
 
-          <h3>Payment Information</h3>
-          <p>Credit Card: {credit_card}</p>
+          <p className="info-label">Payment Information</p>
+          <p className="info-label">Credit Card:  <span className="info-card"> {credit_card}</span></p><br/>
         </div>
 
         <div className="profile-buttons">
-          <button className="profile-button-design">Delete Account</button><br/>
-          <button className="profile-button-design">Edit Profile</button>
+          <button className="profile-button-design">Delete Account</button><br/><br/>
+          <button className="profile-button-design">&nbsp; Edit Profile &nbsp;</button>
         </div>
        
        </div>
