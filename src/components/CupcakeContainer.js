@@ -29,19 +29,19 @@ class CupcakeContainer extends React.Component {
   renderCupcakes = () => {
     if (this.state.searchName !== '') {
       return this.state.cupcakes.filter(cupcake => cupcake.flavor.toLowerCase().includes(this.state.searchName)).map(cupcake => {
-        return <CupcakeCard key={cupcake.id} cupcakes={cupcake} {...this.props}/>
+        return <CupcakeCard key={cupcake.id} cupcake={cupcake} {...this.props}/>
       })
     } else if (this.state.sortBy === 'Name') {
       return this.state.cupcakes.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1).map(cupcake => {
-        return <CupcakeCard key={cupcake.id} cupcakes={cupcake} {...this.props}/>
+        return <CupcakeCard key={cupcake.id} cupcake={cupcake} {...this.props}/>
       })
     } else if (this.state.sortBy === 'Price') {
       return this.state.cupcakes.sort((a, b) => a.price > b.price ? 1 : -1).map(cupcake => {
-        return <CupcakeCard key={cupcake.id} cupcakes={cupcake} {...this.props}/>
+        return <CupcakeCard key={cupcake.id} cupcake={cupcake} {...this.props}/>
       })
     } else {
       return this.state.cupcakes.map(cupcake => {
-        return <CupcakeCard key={cupcake.id} cupcakes={cupcake} {...this.props}/>
+        return <CupcakeCard key={cupcake.id} cupcake={cupcake} {...this.props}/>
       })
     }
   }
@@ -59,7 +59,6 @@ class CupcakeContainer extends React.Component {
   }
 
   render() {
-      console.log(this.props)
     return( 
       <div>
         <Navbar 

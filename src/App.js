@@ -11,6 +11,7 @@ import CssCupcake from './components/CssCupcake'
 import CupcakeProfile from './components/CupcakeProfile'
 import Search from './components/Search'
 import Sort from './components/Sort'
+import Cart from './components/Cart'
 
 
 class App extends Component {
@@ -30,7 +31,8 @@ class App extends Component {
       credit_card: ""
     },
     username: '',
-    loggedInUser: {}
+    loggedInUser: {}, 
+    cupcakesInCart: []
   }
 
   handleFormChange = event => {
@@ -88,6 +90,24 @@ class App extends Component {
     this.createNewUser(user)
   }
 
+  addToCart = (cupcakeID, userID) => {
+    fetch(`http://localhost:4000/carts`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        user_id: userID,
+        cupcake_id: cupcakeID
+      })
+    })
+    .then(resp => resp.json())
+    .then(cart => this.setState({
+      cupcakesInCart: [...this.state.cupcakesInCart, cart.cupcake]
+    }))
+  }
+
   render() {
     return (
      
@@ -141,7 +161,16 @@ class App extends Component {
         />
         <Route 
           exact path="/cupcakes/:id" 
-          render={(routerProps) => <CupcakeProfile 
+          render={(routerProps) => <CupcakeProfile
+            loggedInUser={this.state.loggedInUser}
+            addToCart={this.addToCart}
+            {...routerProps} />}
+        />
+        <Route 
+          exact path='/cart'
+          render={routerProps => <Cart 
+            loggedInUser={this.state.loggedInUser}
+            cupcakesInCart={this.state.cupcakesInCart}
             {...routerProps} />}
         />
       </div>

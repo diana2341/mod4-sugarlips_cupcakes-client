@@ -41,7 +41,7 @@ class CupcakeCard extends React.Component {
   }
     
     render() {
-        const{name,id}=this.props.cupcakes
+        const{name,id}=this.props.cupcake
 
       return(
         <div className="bg-img">

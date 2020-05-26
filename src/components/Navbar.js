@@ -37,6 +37,12 @@ const Navbar = props => {
                 <li >
                     { props.accountLink ? props.accountLink : null }
                 </li>
+                <li>
+                  <Link 
+                    className="text-c"
+                    to="/cart"
+                  >Cart</Link>
+                </li>
                 <li >
                   <Link 
                     onClick={props.logoutUser} 
@@ -55,3 +61,4 @@ const Navbar = props => {
 }
 
 export default Navbar;
+
