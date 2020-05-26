@@ -36,7 +36,7 @@ const Form = props => {
               value={password}
               placeholder="Password" 
             />
-            <h3>Additional Information</h3>
+            {/* <h3>Additional Information</h3> */}
             <input 
               onChange={handleFormChange} 
               type="text" 

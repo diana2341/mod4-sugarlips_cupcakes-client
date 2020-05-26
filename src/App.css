@@ -306,7 +306,7 @@ left: 17.5vh
   grid-template-columns: auto auto auto;
   background-color: linear-gradient( 135deg, #FDCFCF 10%, rgb(243, 176, 176) 100%);
   padding: 10px;
-  margin-top: 65px;
+  margin-top: 100px;
   grid-gap: 10px;
 
 }
@@ -376,7 +376,7 @@ nav ul li a:hover{
 *{transition: all .3s linear; box-sizing: border-box;}
 body{
 /*   background-color: #fbc2eb; */
-  
+  height: 100%;
 
   background-image: linear-gradient( 135deg, #FDCFCF 10%, rgb(243, 176, 176) 100%);
   background-repeat: no-repeat;
@@ -1140,3 +1140,177 @@ background-color: rgba(248, 246, 246, 0.658);
     transform: scale(1);
   }
 }
+
+
+/* search barrrr */
+.search{
+  border: none;
+  background: transparent;
+  border: none;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  outline: none;
+  width: 100%;
+  padding: 0.75em 1.125em;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+
+}
+.select-sort{
+  border: none;
+  background: transparent;
+  border: none;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  outline: none;
+  width: 100%;
+  padding: 0.75em 1.125em;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+	cursor: pointer;  
+	transition: background-color 0.2s ease;
+
+}
+
+.check-me{
+  /* bottom: -0.1em; */
+
+  background: rgba(238, 177, 177, 0.342);
+  border: 2px solid rgb(238, 177, 177);
+  width: 50%;
+  border-bottom-width: 5px ;
+  margin: 8px 0;
+  font-family: 'Comfortaa', cursive;
+   outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+  
+  position: relative;
+  font-family: 'Coiny';font-size: 14px;
+
+}
+
+
+
+/* entrance pageeeee */
+
+.center-entrance{
+  position: absolute;
+  padding-top: 15em;
+  padding-left: 15em;
+  z-index: 1000;
+-webkit-animation: fadein 8s; 
+   animation: fadein 8s;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+.mustache{
+    transform: rotate(100deg) ;
+
+}
+/* first cupcake  */
+.rotate{
+  position: absolute;
+  left:-3em;
+  max-width:500em;
+  height:auto;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: slide-cupcake 1.2s   forwards;
+  z-index: -999;
+
+}
+/* second cupcake */
+.rotate2{
+  margin-top: 15em;
+  position: absolute;
+  left:-3em;
+  max-width:500em;
+  height:auto;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: slide-cupcake 1.2s   forwards;
+  z-index: -999;
+
+}
+/* goth cupcake */
+.rotate3{
+  position: fixed;
+  bottom: 0%;
+  left:-3em;
+  max-width:500em;
+  height: 450px; 
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: slide-up-cupcake 1.2s   forwards;
+  z-index: -999;
+
+
+
+}
+
+
+@keyframes slide-cupcake {
+  /* 0%{
+    transform: rotate(100deg) ;
+
+  } */
+  50% {
+    transform: scaleX(1);
+    
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform-origin: right;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+
+@keyframes slide-up-cupcake {
+  /* 0%{
+    transform: rotate(100deg) ;
+
+  } */
+  50% {
+    transform: scaleY(1);
+    
+    transform-origin: bottom;
+  }
+
+  50.1% {
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+
