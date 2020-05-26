@@ -12,7 +12,7 @@ import CupcakeProfile from './components/CupcakeProfile'
 import Search from './components/Search'
 import Sort from './components/Sort'
 import Cart from './components/Cart'
-
+import ConfirmPurchase from './components/ConfirmPurchase'
 
 class App extends Component {
 
@@ -128,6 +128,26 @@ class App extends Component {
     })
   }
 
+  confirmPurchase = (userID, props) => {
+    fetch('http://localhost:4000/carts/purchase', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        id: userID
+      })
+    })
+    .then(resp => resp.json())
+    .then(
+      this.setState({
+        cupcakesInCart: []
+      }, props.history.push('/purchase-confirmation')
+      )
+    )
+  }
+
   render() {
     return (
      
@@ -190,10 +210,19 @@ class App extends Component {
           exact path='/cart'
           render={routerProps => <Cart 
             cupcakesInCart={this.state.cupcakesInCart}
+            confirmPurchase={this.confirmPurchase}
             removeCupcakeFromCart={this.removeCupcakeFromCart}
             loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
             {...routerProps} />}
+        />
+        <Route 
+          exact path='/purchase-confirmation'
+          render={routerProps => <ConfirmPurchase
+            loggedInUser={this.state.loggedInUser} 
+            logoutUser={this.logoutUser}
+            {...routerProps} 
+          />}
         />
       </div>
     )

@@ -41,4 +41,3 @@ const CartNavbar = props => {
 }
 
 export default CartNavbar;
-

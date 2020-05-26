@@ -5,7 +5,7 @@ export default class Cart extends Component {
   
   render(){
     const {cupcakesInCart} = this.props
-    const {username} = this.props.loggedInUser
+    const {username, first_name, last_name, address_1, address_2, city, state, zip_code, phone_number, credit_card} = this.props.loggedInUser
 
     if (cupcakesInCart.length > 0 && username) {
     // array of prices of each cupcake to sum into a total value
@@ -81,7 +81,19 @@ export default class Cart extends Component {
             </tbody>
           </table>
         : null }
-        <h3>{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3>
+        <h3>{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3><br />
+
+        <h3>Shipping Information</h3>
+        <p>{first_name} {last_name}</p>
+        <p>{address_1} {address_2}</p>
+        <p>{city} {state}, {zip_code}</p>
+        <p>Phone number: {phone_number}</p>
+        <br /><br />
+        <h3>Payment Information</h3>
+        <p>Credit Card #: {credit_card}</p>
+        <br /><br />
+        <h3>Click to checkout</h3>
+        <button onClick={() => this.props.confirmPurchase(this.props.loggedInUser.id, this.props)}>Checkout</button>
       </div>
     )
   }
