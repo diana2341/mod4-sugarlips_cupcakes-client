@@ -1203,11 +1203,18 @@ background-color: rgba(248, 246, 246, 0.658);
 
 .center-entrance{
   position: absolute;
-  padding-top: 15em;
-  padding-left: 15em;
+  padding-top: 13em;
+  padding-left: 14em;
   z-index: 1000;
 -webkit-animation: fadein 8s; 
    animation: fadein 8s;
+   /* overflow: hidden; */
+    font-size: 22px;
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+
+
+
 }
 
 
@@ -1225,46 +1232,124 @@ background-color: rgba(248, 246, 246, 0.658);
 
 
 .mustache{
-    transform: rotate(100deg) ;
+    transform: rotate(107deg) ;
 
+}
+/* .blueberry{
+  transform: rotate(85deg) ;
+
+} */
+.lemon{
+  transform: rotate(284deg) ;
+
+}
+.sprinlke-front-page{
+  transform: rotate(251deg) ;
+
+}
+.goth{
+  transform: rotate(70deg) ;
+
+}
+.mus{
+  
+    transform: rotate(180deg) ;
+  
+  
 }
 /* first cupcake  */
 .rotate{
-  position: absolute;
-  left:-3em;
-  max-width:500em;
+  margin-top: -10em;
+
+  position: fixed;
+  left:-10em;
+  width:500em;
   height:auto;
   transform: scaleX(0);
   transform-origin: left;
   animation: slide-cupcake 1.2s   forwards;
   z-index: -999;
+  overflow: hidden
 
 }
 /* second cupcake */
-.rotate2{
-  margin-top: 15em;
-  position: absolute;
-  left:-3em;
+.stache{
+  margin-top: -4em;
+  position: fixed;
+  left:40em;
   max-width:500em;
   height:auto;
-  transform: scaleX(0);
-  transform-origin: left;
+  transform: scaleY(0);
+  transform-origin: top;
   animation: slide-cupcake 1.2s   forwards;
   z-index: -999;
+  overflow: hidden;
+
+
 
 }
 /* goth cupcake */
 .rotate3{
+  /* margin-top: 15em; */
+
   position: fixed;
   bottom: 0%;
-  left:-3em;
+  left:-10em;
   max-width:500em;
   height: 450px; 
   transform: scaleY(0);
   transform-origin: bottom;
   animation: slide-up-cupcake 1.2s   forwards;
   z-index: -999;
+  overflow: hidden
 
+
+
+
+}
+/* sprinklesss */
+.rotate4{
+  position: fixed;
+  bottom: 0%;
+  left:25em;
+  max-width:500em;
+  height: 440px; 
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: slide-up-cupcake 1.2s   forwards;
+  z-index: -999;
+  overflow: hidden
+
+
+
+}
+/* lemon */
+.rotate5{
+  margin-top: 30em;
+  position: fixed;
+  right:-5em;
+  max-width:500em;
+  height:auto;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: slide-cupcake-right 1.2s   forwards;
+  z-index: -999;
+  overflow: hidden
+
+}
+
+/* heart cherry */
+.rotate6{
+  margin-top: -10em;
+  position: fixed;
+  right:-3em;
+  max-width:500em;
+  height:auto;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: slide-cupcake-right 1.2s   forwards;
+  z-index: -999;
+  overflow: hidden
 
 
 }
@@ -1283,6 +1368,27 @@ background-color: rgba(248, 246, 246, 0.658);
 
   50.1% {
     transform-origin: right;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+@keyframes slide-cupcake-right {
+  /* 0%{
+    transform: rotate(100deg) ;
+
+  } */
+  50% {
+    transform: scaleX(1);
+    
+    transform-origin: right;
+  }
+
+  50.1% {
+    transform-origin: left;
   }
 
   100% {
@@ -1313,4 +1419,21 @@ background-color: rgba(248, 246, 246, 0.658);
   }
 }
 
+/* stachee */
+@keyframes bounceIn {
+  50% {
+    transform: scaleY(1);
+    
+    transform-origin: top;
+  }
+
+  50.1% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
 
