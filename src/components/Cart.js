@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CartNavbar from './CartNavbar'
 
 export default class Cart extends Component {
   
@@ -19,9 +20,6 @@ export default class Cart extends Component {
     // object to track the qty of each cupcake in cart
     let cupcakeQTY = {}
 
-    // variable assigned to return value from method that removes duplicate cupcakes from cart (only want to represent unique cupcake in html table)
-    let removedCupcakesDuplicates = removeDuplicates(cupcakes, 'name')
-
     // method to track how many of each cupcake are in the cart
     const recordQTY = cupcake => {
       Object.keys(cupcakeQTY).includes(cupcake.name) ? cupcakeQTY[cupcake.name] += 1 : cupcakeQTY[cupcake.name] = 1
@@ -33,6 +31,9 @@ export default class Cart extends Component {
           return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
       })
     }
+
+    // variable assigned to return value from method that removes duplicate cupcakes from cart (only want to represent unique cupcake in html table)
+    let removedCupcakesDuplicates = removeDuplicates(cupcakes, 'name')
 
     // method call to populate cupcakeQTY object that tracks how many cupcakes are in the cart
     cupcakes.forEach(recordQTY)
@@ -55,7 +56,12 @@ export default class Cart extends Component {
 
     return(
       <div>
-        <h3>{username}'s current Cart</h3>
+        <CartNavbar 
+          loggedInUser={this.props.loggedInUser} 
+          logoutUser={this.props.logoutUser}
+        />
+        <br /><br /><br /><br /><br /><br /><br />
+        <h3>{username}'s current Cart</h3><br />
         <table>
           <thead>
             <tr>
