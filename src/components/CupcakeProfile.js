@@ -50,20 +50,18 @@ class CupcakeProfile extends React.Component {
 
                     <h2 id ="buy"className="text-c">${price}</h2>
 
-                    { this.props.loggedInUser.username ? 
-                        <>
-                            <label className="addcart" >Add to cart</label>
-                            <img 
-                                onClick={() => {
-                                    addToCart(id, loggedInUser.id)
-                                    history.push('/cart')
-                                }} 
-                                className="cart"  
-                                src="https://img.icons8.com/dusk/64/000000/shopping-cart-loaded.png" 
-                                alt="cart" 
-                            /> 
-                        </>
-                    : null }
+                    <label className="addcart" >Add to cart</label>
+                    <img
+                        onClick={ this.props.loggedInUser.username ? 
+                            () => {
+                            addToCart(id, loggedInUser.id)
+                            history.push('/cart')
+                            }
+                        : () => history.push('/login') }
+                        className="cart"  
+                        src="https://img.icons8.com/dusk/64/000000/shopping-cart-loaded.png" 
+                        alt="cart" 
+                    /> 
                 </div>            
             </div>
         )
@@ -71,3 +69,4 @@ class CupcakeProfile extends React.Component {
  }
 
 export default CupcakeProfile;
+

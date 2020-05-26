@@ -31,7 +31,8 @@ class App extends Component {
       credit_card: ""
     },
     username: '',
-    loggedInUser: {}
+    loggedInUser: {},
+    cupcakesInCart: []
   }
 
   handleFormChange = event => {
@@ -47,7 +48,7 @@ class App extends Component {
     .then(resp => resp.json())
     .then(user => this.setState({
       loggedInUser: user
-      })
+      }, () => this.setState({cupcakesInCart: user.cupcakes}))
     )
   }
 
@@ -102,7 +103,9 @@ class App extends Component {
       })
     })
     .then(resp => resp.json())
-    .then(console.log)
+    .then(cart => this.setState({
+      cupcakesInCart: [...this.state.cupcakesInCart, cart.cupcake]
+    }))
   }
 
   render() {
@@ -166,6 +169,7 @@ class App extends Component {
         <Route 
           exact path='/cart'
           render={routerProps => <Cart 
+            cupcakesInCart={this.state.cupcakesInCart}
             loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
             {...routerProps} />}

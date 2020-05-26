@@ -4,10 +4,11 @@ import CartNavbar from './CartNavbar'
 export default class Cart extends Component {
   
   render(){
-    const {username, cupcakes} = this.props.loggedInUser
+    const {cupcakesInCart} = this.props
+    const {username} = this.props.loggedInUser
 
     // array of prices of each cupcake to sum into a total value
-    const cupcakesPrices = cupcakes.map(cupcake => cupcake.price)
+    const cupcakesPrices = cupcakesInCart.map(cupcake => cupcake.price)
 
     // helper method that adds up price of each cupcake
     const sumPrice = (accumulator, currentValue) => accumulator + currentValue
@@ -33,10 +34,10 @@ export default class Cart extends Component {
     }
 
     // variable assigned to return value from method that removes duplicate cupcakes from cart (only want to represent unique cupcake in html table)
-    let removedCupcakesDuplicates = removeDuplicates(cupcakes, 'name')
+    let removedCupcakesDuplicates = removeDuplicates(cupcakesInCart, 'name')
 
     // method call to populate cupcakeQTY object that tracks how many cupcakes are in the cart
-    cupcakes.forEach(recordQTY)
+    cupcakesInCart.forEach(recordQTY)
   
     // method to render cupcake row with information including price and QTY amount in cart
     const renderCupcakeRows = () => {
@@ -60,22 +61,24 @@ export default class Cart extends Component {
           loggedInUser={this.props.loggedInUser} 
           logoutUser={this.props.logoutUser}
         />
-        <br /><br /><br /><br /><br /><br /><br />
-        <h3>{username}'s current Cart</h3><br />
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Flavor</th>
-              <th>Price</th>
-              <th>Qty</th>
-            </tr>
-          </thead>
-          <tbody>
-            {renderCupcakeRows()} 
-          </tbody>
-        </table>
-        <h3>{ cupcakes ? `Your total is: $${cupcakeTotal()}` : null }</h3>
+        <br /><br /><br /><br /><br /><br />
+        <h3>{username ? `${username}'s current Cart` : 'Log in to shop our cupcakes!' }</h3><br />
+        {cupcakesInCart ? 
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Flavor</th>
+                <th>Price</th>
+                <th>Qty</th>
+              </tr>
+            </thead>
+            <tbody>
+              {renderCupcakeRows()} 
+            </tbody>
+          </table>
+        : null }
+        <h3>{ cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null }</h3>
       </div>
     )
   }
