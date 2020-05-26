@@ -958,12 +958,22 @@ text-decoration: underline;
   margin-left: -50px;
   /* bottom: 0px; */
  height:auto;
+ display: table;
+
      
 
 
 
 }
+.profile-information, .card-content{
+  min-height: 210px;
+  padding-bottom: 20px;
+  display: table-cell;
+  height: auto;
+  overflow: hidden;
+}
 
+/* makes change sizes with other elements */
   .card-borders {
     position: absolute;
     top: 0;
@@ -1071,7 +1081,7 @@ text-decoration: underline;
    }
    .profile-information{
     width:380px;
-    height: 385px;
+    height: 335px;
 background-color: rgba(248, 246, 246, 0.658);
     position: absolute;
     bottom: -1px;

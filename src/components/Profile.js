@@ -1,14 +1,23 @@
 import React from 'react'
 import Navbar from './Navbar'
+import EditProfile from'./EditProfile'
+
 
 
 const Profile = props => {
+  const [showResults] = React.useState(false)
 
-  const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
+
+  const {id,first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
 
   const {loggedInUser, logoutUser} = props
-  
+  const hadleEdit=(event)=>{
+    props.history.push('/edit-profile') 
+  }
+ 
+  // console.log(props.loggedInUser.first_name)
     return (
+      
       <div>
         <Navbar
           loggedInUser={loggedInUser} 
@@ -46,13 +55,14 @@ const Profile = props => {
         </div>
 
         <div className="profile-buttons">
-          <button className="profile-button-design">Delete Account</button><br/><br/>
-          <button className="profile-button-design">&nbsp; Edit Profile &nbsp;</button>
+          <button className="profile-button-design" onClick={()=>hadleEdit()}>&nbsp; Edit Profile &nbsp;</button>
         </div>
-       
+
        </div>
       </div>
+     
      </div>
+     
     )
 }
 
