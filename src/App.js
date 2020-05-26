@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage'
 import Profile from './components/Profile'
@@ -13,6 +13,8 @@ import Search from './components/Search'
 import Sort from './components/Sort'
 import Cart from './components/Cart'
 import ConfirmPurchase from './components/ConfirmPurchase'
+
+
 
 class App extends Component {
 
@@ -148,7 +150,11 @@ class App extends Component {
     )
   }
 
+
+  
+
   render() {
+console.log(this.props)
     return (
      
       <div className="App">
@@ -157,7 +163,11 @@ class App extends Component {
           render={(routerProps) => <Profile
             loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
-            {...routerProps} />} 
+            {...routerProps} 
+            editInfo={this.editInfo}
+            handleUpdate={this.handleUpdate}
+           loggedInUser= {this.state.loggedInUser}/>
+          } 
         />
         <Route 
           exact path="/signup" 
@@ -171,7 +181,10 @@ class App extends Component {
           exact path="/edit-profile" 
           render={(routerProps) => <EditProfile 
             form={this.state.form}
-            handleFormChange={this.handleFormChange} />} 
+            updateProfile={this.updateProfile}
+            loggedInUser= {this.state.loggedInUser}
+            {...routerProps}
+             />} 
         />
         <Route 
           exact path="/cupcakes" 

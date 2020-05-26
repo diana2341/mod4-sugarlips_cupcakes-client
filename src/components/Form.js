@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Form = props => {
 
+
   const {
     username, password, first_name, last_name, address_1, address_2, city, state, zip_code, phone_number, credit_card
   } = props.form
@@ -175,7 +176,7 @@ const Form = props => {
 
             
           </form>
-           
+
         </div>
       </div>
     </div>
