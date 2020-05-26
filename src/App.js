@@ -108,6 +108,26 @@ class App extends Component {
     }))
   }
 
+  removeCupcakeFromCart = (userID, cupcakeID) => {
+    fetch('http://localhost:4000/carts/remove', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        user: userID,
+        cupcake: cupcakeID
+      })
+    })
+    .then(resp => resp.json())
+    .then(cupcakes => {
+        this.setState({
+          cupcakesInCart: cupcakes
+        })
+    })
+  }
+
   render() {
     return (
      
@@ -170,6 +190,7 @@ class App extends Component {
           exact path='/cart'
           render={routerProps => <Cart 
             cupcakesInCart={this.state.cupcakesInCart}
+            removeCupcakeFromCart={this.removeCupcakeFromCart}
             loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
             {...routerProps} />}

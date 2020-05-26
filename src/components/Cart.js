@@ -49,6 +49,7 @@ export default class Cart extends Component {
               <td>{cupcake.flavor}</td>
               <td>${cupcake.price}</td>
               <td>{cupcakeQTY[cupcake.name]}</td>
+              <td><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></td>
             </tr>
           )
         })
