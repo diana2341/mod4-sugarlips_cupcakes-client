@@ -220,8 +220,10 @@ console.log(this.props)
             {...routerProps} />}
         />
         <Route 
+        
           exact path='/cart'
           render={routerProps => <Cart 
+            
             cupcakesInCart={this.state.cupcakesInCart}
             confirmPurchase={this.confirmPurchase}
             removeCupcakeFromCart={this.removeCupcakeFromCart}

@@ -1547,3 +1547,104 @@ background-color: rgba(248, 246, 246, 0.658);
   }
 }
 
+/* cart pageeeeeee */
+.ck-cart{
+  float: center;
+  width:  200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 4em;
+  margin-top: 1em;
+
+
+}
+.checkout-info{
+  position: absolute;
+  padding-left: 7em;
+  margin-top: -8em;
+
+}
+.checkout-info >*{
+  font-family: 'Coiny';
+
+
+}
+
+.bg-img-checkout {
+  border: 30px solid #eeeeee;
+  border-bottom: 135px solid #eeeeee;
+  border-width:100%;
+  
+  border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
+   z-index: 9.0;
+  -webkit-box-shadow: 15px 15px 15px #777;
+  -moz-box-shadow: 13px 13px 13px #777;
+  box-shadow: 10px 8px 50px #000;
+  
+}
+
+
+
+.bg-img-checkout {
+  width: 400px;
+  height: 400px;
+}
+.cupcake-container-checkout{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: linear-gradient( 135deg, #FDCFCF 10%, rgb(243, 176, 176) 100%);
+  padding: 10px;
+  margin-top: 30px;
+  grid-gap: 8px;
+
+}
+.ship-info {
+  position: fixed;
+  padding-left: 47em;
+  margin-top: -108em;
+
+}
+.ship-info > *{
+    font-family: 'Coiny';
+
+}
+.total-info{
+  position: absolute;
+  padding-left: 30em;
+  /* margin-top: -70em; */
+  font-family: 'Coiny';font-size: 24px;
+
+  
+}
+.check-out-btn{
+  position: absolute;
+  margin-left: 75em;
+  /* margin-top: -120em; */
+
+}
+.horizon-line{
+  width: 100em;
+  margin-top: 5px;
+}
+.my-info{
+  position: absolute;
+  font-family: 'Coiny';font-size: 20px;
+  margin-top: 10px;
+  margin-left: 120px;
+
+
+
+
+}
+/* .scroll-co-items{
+  /* width: 200px; */
+  /* height: 400px;
+  overflow: scroll; */
+  /* overflow: scroll; */
+/* } */ 
+  
+
+  
+
+
+
