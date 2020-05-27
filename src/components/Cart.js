@@ -140,7 +140,13 @@ export default class Cart extends Component {
           logoutUser={this.props.logoutUser}
         />
         <br /><br /><br /><br /><br />
+        
         <h3>This cart is lonely, Go buy some cupcakes!</h3><br />
+        <div >
+          <p className="clouds">
+            
+          </p>
+        </div>
       </div>
     )
   }

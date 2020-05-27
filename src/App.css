@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 320px) { @viewport { width: 320px; } }
+/* @media screen and (max-width: 320px) { @viewport { width: 320px; } } */
 
 /* cupcake animation!! */
 .cupcake{
@@ -1782,7 +1782,7 @@ background-color: rgba(248, 246, 246, 0.658);
    
 
   }
-  .bubble-text,.bubble-text-2,.bubble{
+  .characters,.bubble-text,.bubble-text-2,.bubble{
  animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
 	-moz-animation: bounce 2s infinite;
@@ -1823,4 +1823,72 @@ background-color: rgba(248, 246, 246, 0.658);
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
     40% {transform: translateY(-30px);}
     60% {transform: translateY(-15px);}
+  }
+
+  .confetti-1,.confetti{
+    /* float: center; */
+    width:  300px;
+    height: 400px;
+    object-fit: cover;
+ 
+  }
+  .confetti{
+    position: absolute;
+    margin-left: 67em;
+    margin-top: 1em;
+  }
+  .confetti-1{
+    position: absolute;
+    margin-left: 3em;
+    margin-top: 1em;
+  }
+  .confirm-titile{
+    position: absolute;
+     float: center;
+     width:  auto;
+     height: 300px;
+     padding-left: 11em;
+     font-family: 'Coiny';font-size: 40px;
+
+  }
+  /* .clouds{
+ float: center;
+ width:  300px;
+ height: 300px;
+ object-fit: cover;
+    border: solid black;
+ 
+    background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+background-size: 110px 200px;
+background-repeat: repeat-x;
+z-index: 999;
+  } */
+  .oven{
+    position: absolute;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 35em;
+    margin-top: 15em;
+
+
+  }
+  .checkout-bubble{
+    position: absolute;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 50em;
+    margin-top: 11em;
+  }
+  .order-confirm{
+    position: absolute;
+    margin-left: 30em;
+    margin-top: 13em;
+    font-family: 'Coiny';font-size: 15px;
+color: white;
+
+
   }
