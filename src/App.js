@@ -49,14 +49,16 @@ class App extends Component {
     fetch(`http://localhost:4000/users/${username}`)
     .then(resp => resp.json())
     .then(user => this.setState({
-      loggedInUser: user
-      }, () => this.setState({cupcakesInCart: user.cupcakes}))
+      loggedInUser: user,
+      cupcakesInCart: user.cupcakes
+      })
     )
   }
 
   logoutUser = () => {
     this.setState({
-      loggedInUser: {}
+      loggedInUser: {},
+      cupcakesInCart: []
     })
   }
 

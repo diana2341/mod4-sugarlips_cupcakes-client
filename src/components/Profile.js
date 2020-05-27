@@ -9,7 +9,7 @@ const Profile = props => {
   const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
 
   const {loggedInUser, logoutUser} = props
-  const hadleEdit=(event)=>{
+  const handleEdit=(event)=>{
     props.history.push('/edit-profile') 
   }
  
@@ -53,7 +53,7 @@ const Profile = props => {
         </div>
 
         <div className="profile-buttons">
-          <button className="profile-button-design" onClick={()=>hadleEdit()}>&nbsp; Edit Profile &nbsp;</button>
+          <button className="profile-button-design" onClick={()=>handleEdit()}>&nbsp; Edit Profile &nbsp;</button>
         </div>
 
        </div>
