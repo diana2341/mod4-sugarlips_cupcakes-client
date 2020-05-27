@@ -4,7 +4,7 @@ import React from 'react'
 const Search = props => {
 
   return (
-    <div class="formcontainer">
+    <div className="formcontainer">
       <label style={{ color: 'white' }} className="text-c">Search: </label>
       <input
       className="search"

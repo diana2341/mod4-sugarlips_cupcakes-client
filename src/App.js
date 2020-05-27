@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, useHistory } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage'
 import Profile from './components/Profile'
@@ -154,14 +154,12 @@ class App extends Component {
   
 
   render() {
-console.log(this.props)
     return (
      
       <div className="App">
         <Route 
           exact path="/profile" 
           render={(routerProps) => <Profile
-            loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
             {...routerProps} 
             editInfo={this.editInfo}

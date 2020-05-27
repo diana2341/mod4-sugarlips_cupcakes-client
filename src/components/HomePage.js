@@ -11,13 +11,13 @@ class HomePage extends React.Component {
   render() { 
     
     let cp1=require("../cupcake-img/mustache.png")
-    let cp2=require("../cupcake-img/bluebuerry.png")
+    // let cp2=require("../cupcake-img/bluebuerry.png")
     let cp3=require("../cupcake-img/goth.png")
     // let cp4=require("../cupcake-img/heartstrawberry.png")
     let cp5=require("../cupcake-img/lemon.png")
     let cp6=require("../cupcake-img/xoxo.png")
     let cp7=require("../cupcake-img/sprinkles.png")
-    let cp8=require("../cupcake-img/bunnycake.png") //forlogoooo
+    // let cp8=require("../cupcake-img/bunnycake.png") //forlogoooo
     let cp9=require("../cupcake-img/strawberrybunny.png")
 
 

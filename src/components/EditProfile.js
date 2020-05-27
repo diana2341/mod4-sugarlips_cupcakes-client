@@ -1,5 +1,4 @@
 import React from 'react'
-import Form from './Form'
 
 
 export default class EditProfile extends React.Component {
@@ -47,11 +46,11 @@ export default class EditProfile extends React.Component {
     }
   render(){
   // const {form, handleChange} = this.props
-const {id,first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = this.state
+const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = this.state
 
   return (
     <div>
-      <div class="card-profile">
+      <div className="card-profile">
           <div className="card-borders">
             <div className="border-top"></div>
             <div className="border-right"></div>

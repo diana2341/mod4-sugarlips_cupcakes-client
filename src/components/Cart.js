@@ -47,7 +47,7 @@ export default class Cart extends Component {
       return (
         removedCupcakesDuplicates.map(cupcake => {
           return (
-            <> 
+            <div>
 
           <img className="bow" src={bow} alt="bow"/>
 
@@ -70,9 +70,9 @@ export default class Cart extends Component {
                 <p ><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></p>
               
              </div>
+             </div>
               
 
-            </>
 
           )
         })
