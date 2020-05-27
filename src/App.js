@@ -175,6 +175,7 @@ class App extends Component {
           exact path="/edit-profile" 
           render={(routerProps) => <EditProfile 
             form={this.state.form}
+            logoutUser={this.logoutUser}
             updateProfile={this.updateProfile}
             loggedInUser= {this.state.loggedInUser}
             {...routerProps}

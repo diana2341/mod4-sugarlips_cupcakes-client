@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 
 export default class EditProfile extends React.Component {
@@ -48,8 +49,14 @@ export default class EditProfile extends React.Component {
   // const {form, handleChange} = this.props
 const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = this.state
 
+const {loggedInUser, logoutUser} = this.props
+
   return (
     <div>
+      <Navbar
+         loggedInUser={loggedInUser} 
+         logoutUser={logoutUser}
+      />
       <div className="card-profile">
           <div className="card-borders">
             <div className="border-top"></div>
