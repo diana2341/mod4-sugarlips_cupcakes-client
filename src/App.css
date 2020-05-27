@@ -1558,15 +1558,30 @@ background-color: rgba(248, 246, 246, 0.658);
 
 
 }
+.bow{
+  position: absolute;
+  float: center;
+  width:  200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: -2em;
+  margin-top: 1em;
+  transform: rotate(325deg);
+}
 .checkout-info{
   position: absolute;
-  padding-left: 7em;
-  margin-top: -8em;
+  padding-left: 3em;
+  margin-top: -8.6em;
 
 }
 .checkout-info >*{
   font-family: 'Coiny';
 
+
+}
+.cart-user{
+  font-family: 'Coiny';font-size: 30px;
+  padding-left: 22em;
 
 }
 
@@ -1636,15 +1651,13 @@ background-color: rgba(248, 246, 246, 0.658);
 
 
 }
-/* .scroll-co-items{
-  /* width: 200px; */
-  /* height: 400px;
-  overflow: scroll; */
-  /* overflow: scroll; */
-/* } */ 
-  
 
   
+
+  strong{
+    font-family: 'Coiny';
+
+  }
 
 
 

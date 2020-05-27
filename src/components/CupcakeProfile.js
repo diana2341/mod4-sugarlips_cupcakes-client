@@ -69,4 +69,3 @@ class CupcakeProfile extends React.Component {
  }
 
 export default CupcakeProfile;
-
