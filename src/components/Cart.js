@@ -4,6 +4,8 @@ import CartNavbar from './CartNavbar'
 export default class Cart extends Component {
   
   render(){
+    let bunny=require("../cupcake-img/bunnycake.png")
+
     let bow=require("../cupcake-img/bow.png")
 
     const {cupcakesInCart} = this.props
@@ -70,6 +72,7 @@ export default class Cart extends Component {
                 <p ><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></p>
               
              </div>
+            
              </div>
               
 
@@ -88,25 +91,30 @@ export default class Cart extends Component {
           logoutUser={this.props.logoutUser}
         />
         <br /><br /><br /><br /><br />
-        <h3 className="cart-user">{username ? `${username}'s current Cart` : 'Log in to shop our cupcakes!'}</h3><br />
+        <p className="cart-user">{username ? `${username}'s  Cart` : 'Log in to shop our cupcakes!'}</p><br />
         {cupcakesInCart ? 
-          <table>
-            <thead>
-              <tr>
+          <div className="scroll">
+            {/* <thead> */}
+              {/* <tr> */}
                 {/* <th>Name</th>
                 <th>Flavor</th>
                 <th>Price</th>
                 <th>Qty</th> */}
-              </tr>
-            </thead>
-            <tbody>
+              {/* </tr> */}
+            {/* </thead> */}
+            {/* <tbody> */}
               {cupcakesInCart ? renderCupcakeRows() : null} 
-            </tbody>
-          </table>
+            {/* </tbody> */}
+          </div>
           
         : null }
-        <hr className="horizon-line"/>
+        <img className="bunny" src={bunny} alt="bunny"/>
 
+        <hr className="horizon-line"/>
+        <div className="totaling">
+               <h3>shipping : Free </h3>
+                <h3>Estimated tax $0.00</h3>
+         </div>
         <h3 className="total-info">{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3><br />
 <div className="ship-info">
         <h3>Shipping Information</h3>

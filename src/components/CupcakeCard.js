@@ -2,6 +2,17 @@ import React from 'react'
 import CssCupcake from './CssCupcake'
 
 class CupcakeCard extends React.Component {
+  state={
+    hover:false
+  }
+  mouseover=()=>{
+    console.log("works")
+    this.setState({hover:true})
+  }
+  mouseoverOut=()=>{
+    console.log("works")
+    this.setState({hover:false})
+  }
  componentDidMount(){
     let color=document.getElementsByClassName("frosting__item")   
     Array.from(color).map(color=>{
@@ -41,19 +52,37 @@ class CupcakeCard extends React.Component {
   }
     
     render() {
-        const{name,id}=this.props.cupcake
+      let bubble=require("../cupcake-img/bubble.png")
+
+        const{name,id,flavor}=this.props.cupcake
 
       return(
+        <>
+
         <div className="bg-img">
             <div  className="cupcake-card">
               <div className="card-info">
-                <CssCupcake id={id}/>
+
+                {this.state.hover?
+                  <>
+                  <div id="hey">
+                <img className="bubble" src={bubble} alt="bubble"/> 
+                          
+                <p className="bubble-text">{flavor}</p>
+                <p className="bubble-text-2">♡My flavor is </p>
+                </div>
+                </>
+                :null
+                
+                }
+                <CssCupcake mouseoverOut={this.mouseoverOut} mouseover={this.mouseover} id={id}/>
                 <br/>
                 <h3 className="text">#{name}</h3>
                 <button className="check-me " onClick={() => this.props.history.push(`/cupcakes/${id}`)}>Check me out!</button>
                 </div>
               </div>
          </div>
+         </>
         
         )
     }
