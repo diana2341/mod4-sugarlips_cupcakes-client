@@ -3,22 +3,14 @@ import Navbar from './Navbar'
 
 
 export default class EditProfile extends React.Component {
-  // state = {
-  //   address_1: this.props.loggedInUser.address_1,
-  //   address_2: this.props.loggedInUser.address_2,
-  //   city: this.props.loggedInUser.city,
-  //   state: this.props.loggedInUser.state,
-  //   zip_code: this.props.loggedInUser.zip_code,
-  //   phone_number: this.props.loggedInUser.phone_number,
-  //   credit_card: this.props.loggedInUser.credit_card
-  // }
-
-
   render(){
-    // const {form, handleChange} = this.props
-    const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = this.props.form
+    const {
+      first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code
+    } = this.props.form
 
-    const {loggedInUser, logoutUser} = this.props
+    const {
+      loggedInUser, logoutUser
+    } = this.props
 
     return (
       <div>
