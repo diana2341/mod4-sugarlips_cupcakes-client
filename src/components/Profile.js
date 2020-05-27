@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 const Profile = props => {
 
 
-  const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
+  const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.form
 
   const {loggedInUser, logoutUser} = props
   const handleEdit=(event)=>{
