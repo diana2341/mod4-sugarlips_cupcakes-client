@@ -1,14 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar'
-import EditProfile from'./EditProfile'
 
 
 
 const Profile = props => {
-  const [showResults] = React.useState(false)
 
 
-  const {id,first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
+  const {first_name, last_name, phone_number, credit_card, address_1, address_2, city, state, zip_code} = props.loggedInUser
 
   const {loggedInUser, logoutUser} = props
   const hadleEdit=(event)=>{
@@ -24,7 +22,7 @@ const Profile = props => {
           logoutUser={logoutUser}
         />
 
-        <div class="card-profile">
+        <div className="card-profile">
           <div className="card-borders">
             <div className="border-top"></div>
             <div className="border-right"></div>

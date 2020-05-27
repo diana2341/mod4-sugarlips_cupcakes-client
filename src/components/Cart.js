@@ -4,6 +4,10 @@ import CartNavbar from './CartNavbar'
 export default class Cart extends Component {
   
   render(){
+    let bunny=require("../cupcake-img/bunnycake.png")
+
+    let bow=require("../cupcake-img/bow.png")
+
     const {cupcakesInCart} = this.props
     const {username, first_name, last_name, address_1, address_2, city, state, zip_code, phone_number, credit_card} = this.props.loggedInUser
 
@@ -45,13 +49,34 @@ export default class Cart extends Component {
       return (
         removedCupcakesDuplicates.map(cupcake => {
           return (
-            <tr>
-              <td>{cupcake.name}</td>
-              <td>{cupcake.flavor}</td>
-              <td>${cupcake.price}</td>
-              <td>{cupcakeQTY[cupcake.name]}</td>
-              <td><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></td>
-            </tr>
+            <div>
+
+          <img className="bow" src={bow} alt="bow"/>
+
+              <h1 className="my-info">My information ❤︎ </h1>
+                    <div className="cupcake-container-checkout">
+
+            <div className="bg-img-checkout">
+            
+                 <img className="ck-cart" src={cupcake.image} alt="img"/>
+
+               </div>
+               </div>
+            <div>
+           </div>
+             <div className="checkout-info">
+                <p ><strong>My name is: </strong>{cupcake.name}</p>
+                <p ><strong>My flavor is: </strong>{cupcake.flavor}</p>
+                <p ><strong>I cost: </strong>${cupcake.price}</p>
+                <p ><strong>You bought </strong>{cupcakeQTY[cupcake.name]}<strong> of me !</strong></p>
+                <p ><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></p>
+              
+             </div>
+            
+             </div>
+              
+
+
           )
         })
       )
@@ -59,30 +84,39 @@ export default class Cart extends Component {
   
 
     return(
+      
       <div>
         <CartNavbar 
           loggedInUser={this.props.loggedInUser} 
           logoutUser={this.props.logoutUser}
         />
         <br /><br /><br /><br /><br />
-        <h3>{username ? `${username}'s current Cart` : 'Log in to shop our cupcakes!'}</h3><br />
+        <p className="cart-user">{username ? `${username}'s  Cart` : 'Log in to shop our cupcakes!'}</p><br />
         {cupcakesInCart ? 
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
+          <div className="scroll">
+            {/* <thead> */}
+              {/* <tr> */}
+                {/* <th>Name</th>
                 <th>Flavor</th>
                 <th>Price</th>
-                <th>Qty</th>
-              </tr>
-            </thead>
-            <tbody>
+                <th>Qty</th> */}
+              {/* </tr> */}
+            {/* </thead> */}
+            {/* <tbody> */}
               {cupcakesInCart ? renderCupcakeRows() : null} 
-            </tbody>
-          </table>
+            {/* </tbody> */}
+          </div>
+          
         : null }
-        <h3>{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3><br />
+        <img className="bunny" src={bunny} alt="bunny"/>
 
+        <hr className="horizon-line"/>
+        <div className="totaling">
+               <h3>shipping : Free </h3>
+                <h3>Estimated tax $0.00</h3>
+         </div>
+        <h3 className="total-info">{cupcakesInCart ? `Your total is: $${cupcakeTotal()}` : null}</h3><br />
+<div className="ship-info">
         <h3>Shipping Information</h3>
         <p>{first_name} {last_name}</p>
         <p>{address_1} {address_2}</p>
@@ -91,9 +125,10 @@ export default class Cart extends Component {
         <br /><br />
         <h3>Payment Information</h3>
         <p>Credit Card #: {credit_card}</p>
+ </div>       
         <br /><br />
-        <h3>Click to checkout</h3>
-        <button onClick={() => this.props.confirmPurchase(this.props.loggedInUser.id, this.props)}>Checkout</button>
+        {/* <h3>Click to checkout</h3> */}
+        <button className="check-out-btn"onClick={() => this.props.confirmPurchase(this.props.loggedInUser.id, this.props)}>Checkout</button>
       </div>
     )
   }
@@ -105,7 +140,7 @@ export default class Cart extends Component {
           logoutUser={this.props.logoutUser}
         />
         <br /><br /><br /><br /><br />
-        <h3>Your cart is empty! Go buy some cupcakes!</h3><br />
+        <h3>This cart is lonely, Go buy some cupcakes!</h3><br />
       </div>
     )
   }

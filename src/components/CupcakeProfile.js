@@ -20,10 +20,11 @@ class CupcakeProfile extends React.Component {
         const{id, flavor,name,image,price}=this.state.cupcake
 
         const {history, loggedInUser, addToCart} = this.props
-        
+
         return (
             // className="text-cupcake-profile" for italic #poloroid text
             <div>
+
                 <h1 className="cupcake-name">{name}</h1>
                 <div className="bg-img-cupcake-profile">
                     {/* sprinkles generator :) */}
@@ -69,4 +70,3 @@ class CupcakeProfile extends React.Component {
  }
 
 export default CupcakeProfile;
-

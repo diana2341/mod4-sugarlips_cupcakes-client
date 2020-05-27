@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, useHistory } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage'
 import Profile from './components/Profile'
@@ -156,7 +156,6 @@ class App extends Component {
         <Route 
           exact path="/profile" 
           render={(routerProps) => <Profile
-            loggedInUser={this.state.loggedInUser}
             logoutUser={this.logoutUser}
             {...routerProps} 
             editInfo={this.editInfo}
@@ -215,8 +214,10 @@ class App extends Component {
             {...routerProps} />}
         />
         <Route 
+        
           exact path='/cart'
           render={routerProps => <Cart 
+            
             cupcakesInCart={this.state.cupcakesInCart}
             confirmPurchase={this.confirmPurchase}
             removeCupcakeFromCart={this.removeCupcakeFromCart}

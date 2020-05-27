@@ -6,7 +6,7 @@ class CssCupcake extends React.Component {
 
   render() { 
     return( 
-        <div className ="cupcake">
+        <div onMouseOut={this.props.mouseoverOut} onMouseOver={this.props.mouseover}data-id={this.props.id} className ="cupcake">
         <div className="cupcake-body"></div>
         <div className="bottom-shadow"></div>
         
