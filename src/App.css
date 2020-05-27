@@ -8,9 +8,10 @@
   position: absolute;
   animation: 2s jump ease-out infinite alternate;
   z-index: 1;
-  margin-left: 5vh;
+  margin-left: -3vh;
 
-  
+  margin-top: -2em;
+
 
 }
 .cupcake-body{
@@ -1426,10 +1427,11 @@ background-color: rgba(248, 246, 246, 0.658);
 
 
 }
+
 .enterbtn{
 	position: absolute;
-	top: 100%;
-	left: 35%;
+	top: 200%;
+	left: 50%;
 	transform: translate(-50%,-50%) scale(1);
 	width: 200px;
 	height: 60px;

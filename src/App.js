@@ -49,14 +49,42 @@ class App extends Component {
     fetch(`http://localhost:4000/users/${username}`)
     .then(resp => resp.json())
     .then(user => this.setState({
-      loggedInUser: user
-      }, () => this.setState({cupcakesInCart: user.cupcakes}))
+      loggedInUser: user,
+      cupcakesInCart: user.cupcakes,
+      form: {
+        username: user.username,
+        password: user.password,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        address_1: user.address_1,
+        address_2: user.address_2,
+        city: user.city,
+        state: user.state,
+        zip_code: user.zip_code,
+        phone_number: user.phone_number,
+        credit_card: user.credit_card
+      }
+      })
     )
   }
 
   logoutUser = () => {
     this.setState({
-      loggedInUser: {}
+      loggedInUser: {},
+      cupcakesInCart: [],
+      form: {
+        username: "",
+        password: "",
+        first_name: "",
+        last_name: "",
+        address_1: "",
+        address_2: "",
+        city: "",
+        state: "",
+        zip_code: "",
+        phone_number: "",
+        credit_card: ""
+      }
     })
   }
 
@@ -151,11 +179,54 @@ class App extends Component {
   }
 
 
-  
+  updateProfile = () => {
+    const {  phone_number, credit_card, address_1, address_2, city, state, zip_code} = this.state.form
+
+    fetch(`http://localhost:4000/users/${this.state.loggedInUser.id}`, {
+      method:"PATCH",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+        },
+      body:JSON.stringify({
+        address_1,
+        address_2,
+        city,
+        state,
+        zip_code,
+        phone_number,
+        credit_card 
+      })
+    })
+    .then(resp => resp.json())
+    .then(updatedProfile => this.setState({
+      form: {
+        username: updatedProfile.username,
+        password: updatedProfile.password,
+        first_name: updatedProfile.first_name,
+        last_name: updatedProfile.last_name,
+        address_1: updatedProfile.address_1,
+        address_2: updatedProfile.address_2,
+        city: updatedProfile.city,
+        state: updatedProfile.state,
+        zip_code: updatedProfile.zip_code,
+        phone_number: updatedProfile.phone_number,
+        credit_card: updatedProfile.credit_card
+      }
+    }))
+  }
+
+  handleEditProfileChange = event => {
+    const {name, value} = event.target
+    this.setState({
+      form: {
+        ...this.state.form, [name]: value
+      }
+    })
+  }
 
   render() {
     return (
-     
       <div className="App">
         <Route 
           exact path="/profile" 
@@ -163,6 +234,7 @@ class App extends Component {
             logoutUser={this.logoutUser}
             {...routerProps} 
             editInfo={this.editInfo}
+            form={this.state.form}
             handleUpdate={this.handleUpdate}
            loggedInUser= {this.state.loggedInUser}/>
           } 
@@ -179,6 +251,9 @@ class App extends Component {
           exact path="/edit-profile" 
           render={(routerProps) => <EditProfile 
             form={this.state.form}
+            updateProfile={this.updateProfile}
+            handleEditProfileChange={this.handleEditProfileChange}
+            logoutUser={this.logoutUser}
             updateProfile={this.updateProfile}
             loggedInUser= {this.state.loggedInUser}
             {...routerProps}
