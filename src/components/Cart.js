@@ -69,7 +69,7 @@ export default class Cart extends Component {
                 <p ><strong>My flavor is: </strong>{cupcake.flavor}</p>
                 <p ><strong>I cost: </strong>${cupcake.price}</p>
                 <p ><strong>You bought </strong>{cupcakeQTY[cupcake.name]}<strong> of me !</strong></p>
-                <p ><button onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>Remove Cupcake</button></p>
+                <p ><button className="delete-ck" onClick={() => this.props.removeCupcakeFromCart(this.props.loggedInUser.id, cupcake.id)}>x</button></p>
               
              </div>
             
@@ -82,6 +82,7 @@ export default class Cart extends Component {
       )
     }
   
+    let cross=require("../cupcake-img/cross.png")
 
     return(
       
@@ -128,6 +129,7 @@ export default class Cart extends Component {
  </div>       
         <br /><br />
         {/* <h3>Click to checkout</h3> */}
+        <p className="yay">YAAY!!!</p>
         <button className="check-out-btn"onClick={() => this.props.confirmPurchase(this.props.loggedInUser.id, this.props)}>Checkout</button>
       </div>
     )

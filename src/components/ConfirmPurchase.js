@@ -22,7 +22,7 @@ const ConfirmPurchase = props => {
       <img className="oven" src={shopping} alt="oven"/>
       <img className="checkout-bubble" src={bubble} alt="bubble"/>
       
-      <p className="order-confirm">your order is now being made! check yoour Email for proccessing details </p>
+      <p className="order-confirm">your order is now being made! check your Email for proccessing details </p>
       </div>
 
 
