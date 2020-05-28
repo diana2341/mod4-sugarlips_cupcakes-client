@@ -852,7 +852,11 @@ input[type]:focus {
   height:100%;
 }
 
-
+/* edit profile input feilds */
+.edit-fields{
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+}
 
 /* .login */
 .login-to {margin-top: 100px;}
