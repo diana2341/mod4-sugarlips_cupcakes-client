@@ -2183,61 +2183,63 @@ color: white;
     -webkit-animation: slide 13.5s linear  infinite, mover 1s infinite  alternate;
     -moz-animation: slide 13.5s linear  infinite;
     -o-animation: slide 13.5s linear  infinite;
+    
 
+  }
+  .cloud,.cloud2,.cloud3,.cloud4,.cloud5,.cloud6,.cloud7,.cloud8,.cloud9,.cloud10,.cloud11,.cloud12,.cloud13{
+    width:  200px;
+    height: auto;
+    animation:  cloud-mover 1s infinite  alternate;
+    -webkit-animation:  cloud-mover 1s infinite  alternate; 
+    position: fixed; 
+    overflow-y: scroll;
+    top: 0; right: 0; bottom: 0; left: 0;
   }
   .cloud{
-    position: absolute;
-    width:  200px;
-    height: auto;
-    object-fit: cover;
-    margin-left: 14em;
-    margin-top: 37em;
-    position: absolute;
-    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -moz-animation: slide 25.5s linear  infinite;
-    -o-animation: slide 25.5s linear  infinite;
-
+    margin-left: 41em;
+    margin-top: 44.5em;
   }
   .cloud2{
-    position: absolute;
-    width:  200px;
-    height: auto;
-    object-fit: cover;
-    margin-left: 14em;
-    margin-top: 37em;
-    position: absolute;
-    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -moz-animation: slide 25.5s linear  infinite;
-    -o-animation: slide 25.5s linear  infinite;
-
+    margin-left: 50em;
+    margin-top: 45em;
   }
-  .cloud3,.cloud6{
-    position: absolute;
-    width:  200px;
-    height: auto;
-    object-fit: cover;
-    margin-left: 14em;
-    margin-top: 37em;
-    position: absolute;
-    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -moz-animation: slide 25.5s linear  infinite;
-    -o-animation: slide 25.5s linear  infinite;
-
+  .cloud3{
+    margin-left: 58em;
+    margin-top: 43em;
   }
-  .cloud4,.cloud5,.cloud7{
-    position: absolute;
-    width:  200px;
-    height: auto;
-    object-fit: cover;
-    margin-left: 14em;
-    margin-top: 37em;
-    position: absolute;
-    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
-    -moz-animation: slide 25.5s linear  infinite;
-    -o-animation: slide 25.5s linear  infinite;
 
+
+  .cloud6{
+    margin-left: 67em;
+    margin-top: 44em;
   }
+  .cloud4{
+    margin-left: 75em;
+    padding-top: 43em;
+  }
+  .cloud5{
+    margin-left: 30em;
+    padding-top: 44em;
+  }
+  .cloud7{
+    margin-left: 20em;
+    padding-top: 43em;
+  }
+
+  .cloud8{
+    margin-left: -5em;
+    margin-top: 42.6em;
+  }
+  .cloud9{
+    margin-left: 80px;
+    margin-top: 43em;
+  }
+  .cloud10{
+    margin-left: 200px;
+    margin-top: 44em;
+  }
+  .cloud11{
+    margin-left: 82em;
+    margin-top: 42.6em;
+  }
+  

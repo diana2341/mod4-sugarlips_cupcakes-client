@@ -138,7 +138,7 @@ export default class Cart extends Component {
 
 
     return(
-      <div>
+      <div className="component">
         <CartNavbar 
           loggedInUser={this.props.loggedInUser} 
           logoutUser={this.props.logoutUser}
@@ -160,6 +160,11 @@ export default class Cart extends Component {
             <img className="cloud5"src={cloud} alt="ck"/>
             <img className="cloud6"src={cloud} alt="ck"/>
             <img className="cloud7"src={cloud} alt="ck"/>
+            <img className="cloud8"src={cloud} alt="ck"/>
+            <img className="cloud9"src={cloud} alt="ck"/>
+            <img className="cloud10"src={cloud} alt="ck"/>
+            <img className="cloud11"src={cloud} alt="ck"/>
+
 
 
 
