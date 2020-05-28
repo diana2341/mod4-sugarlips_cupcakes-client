@@ -134,6 +134,8 @@ export default class Cart extends Component {
   }
   let pony=require("../cupcake-img/flying.png")
   let flyingck=require("../cupcake-img/floatingck.png")
+  let cloud=require("../cupcake-img/cloud.png")
+
 
     return(
       <div>
@@ -149,7 +151,19 @@ export default class Cart extends Component {
             <img className="pony"src={pony} alt="pony"/>
             <img className="flyingck"src={flyingck} alt="ck"/>
 
+
           </p>
+            <img className="cloud"src={cloud} alt="ck"/>
+            <img className="cloud2"src={cloud} alt="ck"/>
+            <img className="cloud3"src={cloud} alt="ck"/>
+            <img className="cloud4"src={cloud} alt="ck"/>
+            <img className="cloud5"src={cloud} alt="ck"/>
+            <img className="cloud6"src={cloud} alt="ck"/>
+            <img className="cloud7"src={cloud} alt="ck"/>
+
+
+
+
         </div>
       </div>
     )

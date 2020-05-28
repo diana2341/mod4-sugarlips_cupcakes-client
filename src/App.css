@@ -7,11 +7,15 @@
   width: 30vh;
   position: absolute;
   animation: 2s jump ease-out infinite alternate;
+  -webkit-animation: jump 2s ease-out infinite alternate;
+  -moz-animation:    jump 2s ease-out infinite alternate;
+  -o-animation:      jump 2s ease-out infinite alternate;
+  -ms-transition:    jump 2s ease-out infinite alternate; 
   z-index: 1;
-  margin-left: -3vh;
+  /* margin-left: -3vh; */
+  margin-left:6vh; 
 
-  margin-top: -2em;
-
+  /* margin-top: -2em; */
 
 }
 .cupcake-body{
@@ -63,7 +67,11 @@ width:3.15vh;
 height:3.15vh;
 border-radius:60%;
 /* background:white; */
-animation:4s eye infinite
+animation:4s eye infinite;
+-webkit-animation: 4s eye infinite;
+-moz-animation:    4s eye infinite;
+-o-animation:      4s eye infinite;
+-ms-transition:    4s eye infinite; 
 }
 .eye::after{
 content:'';
@@ -75,6 +83,10 @@ height:.9vh;
 border-radius:50%;
 background:white;
 animation: 4s eye infinite;
+-webkit-animation: 4s eye infinite;
+-moz-animation:    4s eye infinite;
+-o-animation:      4s eye infinite;
+-ms-transition:    4s eye infinite; 
   
 }
 
@@ -95,6 +107,10 @@ left: 17.5vh
   border-radius: 50%;
   background: #F48385;
   animation: .1s shake infinite;
+  -webkit-animation: .1s shake infinite;
+  -moz-animation:    .1s shake infinite;
+  -o-animation:      .1s shake infinite;
+  -ms-transition:    .1s shake infinite; 
 
 }
 .blush-l{ left: 8.4vh; }
@@ -112,6 +128,10 @@ left: 17.5vh
 
   z-index: 110;
   animation: 2s mouth infinite alternate;
+  -webkit-animation: 2s mouth infinite alternate;
+  -moz-animation:    2s mouth infinite alternate;
+  -o-animation:      2s mouth infinite alternate;
+  -ms-transition:    2s mouth infinite alternate; 
 }
 
 .frosting{
@@ -230,6 +250,10 @@ left: 17.5vh
   border-radius: 50%;
   filter: blur(3px);
   animation: 2s bottom-shadow ease-out infinite alternate;
+  -webkit-animation:  2s bottom-shadow ease-out infinite alternate;
+  -moz-animation:     2s bottom-shadow ease-out infinite alternate;
+  -o-animation:       2s bottom-shadow ease-out infinite alternate;
+  -ms-transition:     2s bottom-shadow ease-out infinite alternate; 
 
 }
 
@@ -284,7 +308,172 @@ left: 17.5vh
 }
 
 
-/*  */
+/* other browsers */
+/* shadow */
+@-webkit-keyframes bottom-shadow{
+  0%, 90%{
+    opacity: .3;
+    transform: translateY(0vh) scale(.98);
+}
+100%{
+    transform: translateY(5vh) scale(.95);
+    opacity: .1;
+}
+}
+
+@-moz-keyframes bottom-shadow{
+  0%, 90%{
+    opacity: .3;
+    transform: translateY(0vh) scale(.98);
+}
+100%{
+    transform: translateY(5vh) scale(.95);
+    opacity: .1;
+}
+}
+
+@-o-keyframes bottom-shadow {
+  0%, 90%{
+    opacity: .3;
+    transform: translateY(0vh) scale(.98);
+}
+100%{
+    transform: translateY(5vh) scale(.95);
+    opacity: .1;
+}
+}
+
+@-ms-keyframes bottom-shadow {
+   0%, 90%{
+      opacity: .3;
+      transform: translateY(0vh) scale(.98);
+  }
+  100%{
+      transform: translateY(5vh) scale(.95);
+      opacity: .1;
+  }
+}
+
+/* eye */
+@-webkit-keyframes eye{
+  0%, 45%{ transform: translateX(0vh);}
+  50%, 95%{ transform: translateX(1.25vh);}
+}
+
+@-moz-keyframes eye{
+  0%, 45%{ transform: translateX(0vh);}
+  50%, 95%{ transform: translateX(1.25vh);}
+}
+
+@-o-keyframes eye {
+  0%, 45%{ transform: translateX(0vh);}
+  50%, 95%{ transform: translateX(1.25vh);}
+}
+
+@-ms-keyframes eye {
+  0%, 45%{ transform: translateX(0vh);}
+  50%, 95%{ transform: translateX(1.25vh);}
+}
+
+/* mouth */
+@-webkit-keyframes mouth{
+  0%, 80%{
+    border: 1.5vh solid #ff2a7b;
+    border-bottom: 0;
+}
+100%{
+    border: 1.5vh solid #ff2a7b;
+}
+}
+
+@-moz-keyframes mouth{
+  0%, 80%{
+    border: 1.5vh solid #ff2a7b;
+    border-bottom: 0;
+}
+100%{
+    border: 1.5vh solid #ff2a7b;
+}
+}
+
+@-o-keyframes mouth {
+  0%, 80%{
+    border: 1.5vh solid #ff2a7b;
+    border-bottom: 0;
+}
+100%{
+    border: 1.5vh solid #ff2a7b;
+}
+}
+
+@-ms-keyframes mouth {
+  0%, 80%{
+    border: 1.5vh solid #ff2a7b;
+    border-bottom: 0;
+}
+100%{
+    border: 1.5vh solid #ff2a7b;
+}
+}
+
+/* shake */
+@-webkit-keyframes shake{
+  0%{ transform: translateY(-1px); }
+  100%{ transform: translateY(1px);}
+}
+
+@-moz-keyframes shake{
+  0%{ transform: translateY(-1px); }
+  100%{ transform: translateY(1px);}
+}
+
+@-o-keyframes shake {
+  0%{ transform: translateY(-1px); }
+  100%{ transform: translateY(1px);}
+}
+
+@-ms-keyframes shake {
+  0%{ transform: translateY(-1px); }
+  100%{ transform: translateY(1px);}
+}
+
+/* jump */
+@-webkit-keyframes jump{
+  0%, 90%{
+    transform: translateY(2vh) scale(1);
+}
+100%{
+    transform: translateY(-3vh) scale(.95);
+}
+}
+
+@-moz-keyframes jump{
+  0%, 90%{
+    transform: translateY(2vh) scale(1);
+}
+100%{
+    transform: translateY(-3vh) scale(.95);
+}
+}
+
+@-o-keyframes jump {
+  0%, 90%{
+    transform: translateY(2vh) scale(1);
+}
+100%{
+    transform: translateY(-3vh) scale(.95);
+}
+}
+
+@-ms-keyframes jump {
+  0%, 90%{
+    transform: translateY(2vh) scale(1);
+}
+100%{
+    transform: translateY(-3vh) scale(.95);
+}
+}
+
 
 
 /* cupcake css */
@@ -1277,8 +1466,12 @@ background-color: rgba(248, 246, 246, 0.658);
 
 .center-entrance{
   position: absolute;
-  top: 10em;
-  left: 12em;
+  /* top: 10em; */
+  top:12em;
+
+  /* left: 12em; */
+  left: 10em;
+
   z-index: 1000;
 -webkit-animation: fadein 8s; 
    animation: fadein 8s;
@@ -1430,8 +1623,10 @@ background-color: rgba(248, 246, 246, 0.658);
 
 .enterbtn{
 	position: absolute;
-	top: 200%;
-	left: 50%;
+  top: 200%;
+  left: 40%;
+
+	/* left: 50%; */
 	transform: translate(-50%,-50%) scale(1);
 	width: 200px;
 	height: 60px;
@@ -1927,6 +2122,7 @@ color: white;
     text-shadow: 1px 1px 3px #000000;
     color: white;
   }
+  
   @keyframes slide{
     0% {
       left: -768px;
@@ -1934,6 +2130,8 @@ color: white;
     100% {
       left: 868px;
     }
+  
+    
   }
   @-webkit-keyframes slide{
     0% {
@@ -1942,6 +2140,7 @@ color: white;
     100% {
       left: 768px;
     }
+
   }
   @-moz-keyframes slide{
     0% {
@@ -1950,6 +2149,7 @@ color: white;
     100% {
       left: 868px;
     }
+ 
   }
   @-o-keyframes slide{
     0% {
@@ -1958,11 +2158,86 @@ color: white;
     100% {
       left: 868px;
     }
+   
   }
+  @-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
+@-webkit-keyframes cloud-mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes cloud-mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
   .clouds {
     position: absolute;
-    animation: slide 10s linear infinite;
-    -webkit-animation: slide 10s linear infinite;
-    -moz-animation: slide 10s linear infinite;
-    -o-animation: slide 10s linear infinite;
+    animation: slide 13.5s linear  infinite, mover 1s infinite  alternate;
+    -webkit-animation: slide 13.5s linear  infinite, mover 1s infinite  alternate;
+    -moz-animation: slide 13.5s linear  infinite;
+    -o-animation: slide 13.5s linear  infinite;
+
+  }
+  .cloud{
+    position: absolute;
+    width:  200px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 14em;
+    margin-top: 37em;
+    position: absolute;
+    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -moz-animation: slide 25.5s linear  infinite;
+    -o-animation: slide 25.5s linear  infinite;
+
+  }
+  .cloud2{
+    position: absolute;
+    width:  200px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 14em;
+    margin-top: 37em;
+    position: absolute;
+    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -moz-animation: slide 25.5s linear  infinite;
+    -o-animation: slide 25.5s linear  infinite;
+
+  }
+  .cloud3,.cloud6{
+    position: absolute;
+    width:  200px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 14em;
+    margin-top: 37em;
+    position: absolute;
+    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -moz-animation: slide 25.5s linear  infinite;
+    -o-animation: slide 25.5s linear  infinite;
+
+  }
+  .cloud4,.cloud5,.cloud7{
+    position: absolute;
+    width:  200px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 14em;
+    margin-top: 37em;
+    position: absolute;
+    animation: slide 13.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -webkit-animation: slide 25.5s linear  infinite, cloud-mover 1s infinite  alternate;
+    -moz-animation: slide 25.5s linear  infinite;
+    -o-animation: slide 25.5s linear  infinite;
+
   }
