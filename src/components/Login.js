@@ -13,6 +13,7 @@ const Login = props => {
           <h1 className="text-c">Login</h1>
           <p className="text-c">Welcome Back Sugar Friend!!</p>
         </div>
+        <p className="cover"></p>
 
         <form autoComplete="off">
           <div className="inputs-login">
