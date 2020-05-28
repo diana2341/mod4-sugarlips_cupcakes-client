@@ -132,6 +132,8 @@ export default class Cart extends Component {
       </div>
     )
   }
+  let pony=require("../cupcake-img/flying.png")
+  let flyingck=require("../cupcake-img/floatingck.png")
 
     return(
       <div>
@@ -141,10 +143,12 @@ export default class Cart extends Component {
         />
         <br /><br /><br /><br /><br />
         
-        <h3>This cart is lonely, Go buy some cupcakes!</h3><br />
+        <h3 className="lonley">This cart is lonely, Go buy some cupcakes!</h3><br />
         <div >
           <p className="clouds">
-            
+            <img className="pony"src={pony} alt="pony"/>
+            <img className="flyingck"src={flyingck} alt="ck"/>
+
           </p>
         </div>
       </div>
