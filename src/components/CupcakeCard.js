@@ -44,7 +44,7 @@ console.log(playPromise)
       color.style.background="#FCED98"
     } 
     if(  color.dataset.id==="5"){
-      color.style.background="##F28B82"
+      color.style.background="#F28B82"
     } 
     if(  color.dataset.id==="6"){
       color.style.background="#E7B195"
@@ -53,7 +53,7 @@ console.log(playPromise)
       color.style.background="#BB1E27"
     } 
     if(  color.dataset.id==="8"){
-      color.style.background="#B5C4B1"
+      color.style.background="##B5C4B1"
     } 
     if(  color.dataset.id==="9"){
       color.style.background="#536279"
@@ -61,6 +61,12 @@ console.log(playPromise)
     if(  color.dataset.id==="10"){
       color.style.background="#E9E5C0"
     } 
+    if(  color.dataset.id==="11"){
+      color.style.background="#9D93DC"
+    } 
+    if(  color.dataset.id==="12"){
+      color.style.background="#90ee90"
+    }
   
 
     })    

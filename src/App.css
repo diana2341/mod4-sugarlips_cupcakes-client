@@ -896,7 +896,7 @@ input[type]:focus {
   border: 30px solid #eeeeee;
   border-bottom: 135px solid #eeeeee;
   border-width:100%;
-  
+
   border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
    z-index: 9.0;
   -webkit-box-shadow: 15px 15px 15px #777;
