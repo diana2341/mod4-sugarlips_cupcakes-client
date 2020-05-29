@@ -1863,7 +1863,9 @@ background-color: rgba(248, 246, 246, 0.658);
 .checkout-info >*{
   font-family: 'Coiny';
   color:rgb(238, 144, 164);
-  text-shadow: 1px 1px 3px #000000;
+  /* text-shadow: 1px 1px 3px #1a1919; */
+  text-shadow: 1px 1px rgb(22, 19, 19);
+
 
 
 
@@ -2000,7 +2002,7 @@ background-color: rgba(248, 246, 246, 0.658);
   margin-left: 26em;
   z-index: 1;
   color:rgb(238, 144, 164);
-  text-shadow: 1px 1px 3px #000000;
+  text-shadow: 1px 1px rgb(22, 19, 19);
 
 
 
@@ -2015,7 +2017,7 @@ background-color: rgba(248, 246, 246, 0.658);
   strong{
     font-family: 'Coiny';
     color:rgb(238, 144, 164);
-    text-shadow: 1px 1px 3px #000000;
+    text-shadow: 1px rgb(22, 19, 19);
 
 
   }
