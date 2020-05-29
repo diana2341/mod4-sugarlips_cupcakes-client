@@ -45,6 +45,7 @@ content: '';
   background: linear-gradient(to bottom, #ff87a4 60%, #e3748f);
   bottom: -1.65vh;
   border-radius: 50%;
+  
 
 }
 
@@ -72,6 +73,10 @@ animation:4s eye infinite;
 -moz-animation:    4s eye infinite;
 -o-animation:      4s eye infinite;
 -ms-transition:    4s eye infinite; 
+
+  animation: grinb 4s #EAE0CE infinite;
+
+
 }
 .eye::after{
 content:'';
@@ -140,6 +145,8 @@ left: 17.5vh
   height: 15vh;
   bottom: 12vh;
   left: 4vh;
+  
+ 
 }
 .frosting__item:nth-of-type(1){
   position: absolute;
@@ -149,6 +156,7 @@ left: 17.5vh
   bottom: 0;
   z-index: 100;
   background: #7CCDC7;
+  
 
 }
 
@@ -161,6 +169,7 @@ left: 17.5vh
   border-radius: 5vh;
   z-index: 80;
   background: #7CCDC7;
+  
 }
 
 .frosting__item:nth-of-type(3){
@@ -172,6 +181,7 @@ left: 17.5vh
   top: 0;
   z-index: 70;
   background: #7CCDC7;
+  
 }
 .frosting__item:nth-of-type(3)::before{
   content: '';
@@ -183,6 +193,7 @@ left: 17.5vh
   border-radius: 50% / 60%;
   background: #e30b5d;
   transform: rotateZ(-10deg);
+  
 }
 
 /* cherry */
@@ -268,8 +279,15 @@ left: 17.5vh
   }
 }
 @keyframes eye {
-  0%, 45%{ transform: translateX(0vh);}
-  50%, 95%{ transform: translateX(1.25vh);}
+	0%, 10% {
+		bottom: 0;
+	}
+	20%, 40% {
+		bottom: 50%;
+	}
+	50%, 100% {
+		bottom: 0;
+	}
 }
 @keyframes mouth {
   0%, 80%{
@@ -900,7 +918,7 @@ input[type]:focus {
   border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
    z-index: 9.0;
   -webkit-box-shadow: 15px 15px 15px #777;
-  -moz-box-shadow: 13px 13px 13px #777;
+  -moz-box-shadow: 13px 13px 13px rgb(194, 116, 116);
   box-shadow: 10px 8px 50px #000;
 }
 
@@ -978,6 +996,7 @@ input[type]:focus {
    left: 50em;
    top: 15em;
    max-width: 500px;
+   
 
 
 
@@ -1497,14 +1516,45 @@ background-color: rgba(248, 246, 246, 0.658);
 
 
 /* entrance pageeeee */
+.entrance-text{
+  /* background:url("https://st.depositphotos.com/1899403/2329/i/450/depositphotos_23297186-stock-photo-colorful-candy-sprinkles-isolated-on.jpg") ; */
+  font-family: 'Coiny';
+  /* color:#DA4A54 */
 
+}
+.kiss{
+  position: absolute;
+  width: 10%;
+  height: auto;
+  background-size: cover;
+  margin-left: -4em;
+  margin-top:-1em;
+
+  /* position: absolute;
+  width: 30%;
+  height: auto;
+  background-size: cover;
+  margin-left: 10em;
+  margin-top:4em; */
+
+}
+.kiss2{
+  position: absolute;
+  width: 10%;
+  height: auto;
+  background-size: cover;
+  margin-left: 31em;
+  margin-top:-0.8em;
+
+
+}
 .center-entrance{
   position: absolute;
   /* top: 10em; */
   top:12em;
 
   /* left: 12em; */
-  left: 10em;
+  left: 18em;
 
   z-index: 1000;
 -webkit-animation: fadein 8s; 
@@ -2078,11 +2128,14 @@ background-color: rgba(248, 246, 246, 0.658);
     60% {transform: translateY(-15px);}
   }
 
-  .confetti-1,.confetti{
+  .confetti-1,.confetti,.confetti-3{
     /* float: center; */
     width:  300px;
     height: 400px;
     object-fit: cover;
+    position: fixed; 
+    overflow-y: scroll;
+    top: 0; right: 0; bottom: 0; left: 0;
  
   }
   .confetti{
@@ -2093,6 +2146,11 @@ background-color: rgba(248, 246, 246, 0.658);
   .confetti-1{
     position: absolute;
     margin-left: 3em;
+    margin-top: 1em;
+  }
+  .confetti-3{
+    position: absolute;
+    margin-left: 35em;
     margin-top: 1em;
   }
   .confirm-titile{

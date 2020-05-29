@@ -35,17 +35,17 @@ export default class EditProfile extends React.Component {
           <div className="profile-information">
             <h3 className="your-info">Your information</h3><br/>
 
-            <p className="info-card" ><span className="info-label"  >Address 1: </span> <input className="edit-fields"  name ="address_1"  type="text" value={address_1} onChange={this.props.handleEditProfileChange}/> </p><br/>
-            <p className="info-card"> <span className="info-label" >Address 2: </span> <input className="edit-fields" name ="address_2"  type="text" value={address_2} onChange={this.props.handleEditProfileChange}/> </p><br/>
-            <p className="info-card"> <span className="info-label" >city:</span> <input className="edit-fields" name ="city"  type="text" value={city} onChange={this.props.handleEditProfileChange}/> </p><br/>
-            <p className="info-card"> <span className="info-label" >state: </span><input className="edit-fields" name ="state"  type="text" value={state} onChange={this.props.handleEditProfileChange}/> </p><br/>
-            <p className="info-card"><span className="info-label" >zipcode: </span><input className="edit-fields"  name ="zip_code" type="text" value={zip_code} onChange={this.props.handleEditProfileChange}/></p><br/>
+            <p className="info-card" ><span className="info-label"  >Address 1: </span> <input autoComplete="off" className="edit-fields"  name ="address_1"  type="text" value={address_1} onChange={this.props.handleEditProfileChange}/> </p><br/>
+            <p className="info-card"> <span className="info-label" >Address 2: </span> <input autoComplete="off" className="edit-fields" name ="address_2"  type="text" value={address_2} onChange={this.props.handleEditProfileChange}/> </p><br/>
+            <p className="info-card"> <span className="info-label" >city:</span> <input autoComplete="off" className="edit-fields" name ="city"  type="text" value={city} onChange={this.props.handleEditProfileChange}/> </p><br/>
+            <p className="info-card"> <span className="info-label" >state: </span><input autoComplete="off" className="edit-fields" name ="state"  type="text" value={state} onChange={this.props.handleEditProfileChange}/> </p><br/>
+            <p className="info-card"><span className="info-label" >zipcode: </span><input autoComplete="off" className="edit-fields"  name ="zip_code" type="text" value={zip_code} onChange={this.props.handleEditProfileChange}/></p><br/>
 
             <p className="info-label"> Contact Information</p>
-            <p className="info-label">Phone number: <span className="info-card"> <input className="edit-fields" name="phone_number"  type="text" value={phone_number} onChange={this.props.handleEditProfileChange}/></span> </p><br/>
+            <p className="info-label">Phone number: <span className="info-card"> <input autoComplete="off" className="edit-fields" name="phone_number"  type="text" value={phone_number} onChange={this.props.handleEditProfileChange}/></span> </p><br/>
 
             <p className="info-label">Payment Information</p>
-            <p className="info-label">Credit Card:  <span className="info-card"> <input className="edit-fields"  name="credit_card" type="text" value={credit_card} onChange={this.props.handleEditProfileChange}/></span></p><br/>
+            <p className="info-label">Credit Card:  <span className="info-card"> <input autoComplete="off" className="edit-fields"  name="credit_card" type="text" value={credit_card} onChange={this.props.handleEditProfileChange}/></span></p><br/>
           </div>
 
           <div className="profile-buttons">

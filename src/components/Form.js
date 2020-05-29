@@ -22,7 +22,7 @@ const Form = props => {
             <h1 className="text-c">Sign up</h1>
             <p className="text-c">Join Our Sugar lips Community</p>
           </div>
-          <form className="signupform"autoComplete="off">
+          <form  className="signupform"autoComplete="off">
 
           <div className="inputs">
             <input

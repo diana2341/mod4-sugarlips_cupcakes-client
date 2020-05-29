@@ -49,7 +49,7 @@ export default class Cart extends Component {
       return (
         removedCupcakesDuplicates.map(cupcake => {
           return (
-            <div>
+            <div className={cupcake.id}>
 
           <img className="bow" src={bow} alt="bow"/>
 
@@ -82,7 +82,6 @@ export default class Cart extends Component {
       )
     }
   
-    let cross=require("../cupcake-img/cross.png")
 
     return(
       

@@ -19,6 +19,7 @@ class HomePage extends React.Component {
     let cp7=require("../cupcake-img/sprinkles.png")
     // let cp8=require("../cupcake-img/bunnycake.png") //forlogoooo
     let cp9=require("../cupcake-img/strawberrybunny.png")
+    let kiss=require("../cupcake-img/kiss1.png")
 
 
 
@@ -26,8 +27,11 @@ class HomePage extends React.Component {
     return( 
       <div>
           <div className="center-entrance">
-             <h1 className="text-c">Some only dream of cupcakes others make it happen</h1>
-              <button className="enterbtn" onClick={this.handClick}>enter</button>
+          <img className="kiss" src={kiss} alt="cupcake"/>
+          <img className="kiss2" src={kiss} alt="cupcake"/>
+
+             <h1 className="entrance-text"> Get some sugar on those lips </h1>
+              <button className="enterbtn" onClick={this.handClick}>explore</button>
 
           </div>
           

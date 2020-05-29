@@ -15,15 +15,15 @@ const Login = props => {
         </div>
         <p className="cover"></p>
 
-        <form autoComplete="off">
+        <form  autoComplete="off">
           <div className="inputs-login">
             <input 
               type="text" 
               name="username" 
               value={username} 
               onChange={handleChange}  
-              placeholder="enter username" 
-              required /><br/>
+              placeholder="enter username"  
+              required/><br/>
 
             <input 
               type="password" 

@@ -254,7 +254,6 @@ class App extends Component {
             updateProfile={this.updateProfile}
             handleEditProfileChange={this.handleEditProfileChange}
             logoutUser={this.logoutUser}
-            updateProfile={this.updateProfile}
             loggedInUser= {this.state.loggedInUser}
             {...routerProps}
              />} 

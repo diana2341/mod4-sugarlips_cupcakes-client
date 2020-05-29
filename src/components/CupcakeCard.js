@@ -1,30 +1,16 @@
 import React from 'react'
 import CssCupcake from './CssCupcake'
-import Play from "../audio/chocolate.mp3"
 
 
 class CupcakeCard extends React.Component {
   state={
     hover:false,
-    selectedColor:true
   }
   mouseover=()=>{
     this.setState({hover:true})
    
   }
-  onclickplay=()=>{
 
-
-let playPromise=document.getElementById("audio").play();
-if (playPromise !== undefined) {
-  playPromise.then(function() {
-    playPromise.play()
-  }).catch(function(error) {
-console.log(error)  })};
-
-console.log(playPromise)
-
-  }
   mouseoverOut=()=>{
     this.setState({hover:false})
   }
@@ -80,10 +66,8 @@ console.log(playPromise)
 
       return(
         <>
-    <audio id="audio" >
-			<source src="../audio/chocolate.mp3"  >
-			</source>
-		</audio>
+        
+    
         <div className="bg-img">
             <div  className="cupcake-card">
               <div className="card-info">

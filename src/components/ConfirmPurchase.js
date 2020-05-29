@@ -18,6 +18,8 @@ const ConfirmPurchase = props => {
       <h2 className="confirm-titile">Thank you for your purchase!</h2>
       <img className="confetti" src={confetti} alt="confetti"/>
       <img className="confetti-1" src={confetti} alt="confetti"/>
+      <img className="confetti-3" src={confetti} alt="confetti"/>
+
       <div className="characters">
       <img className="oven" src={shopping} alt="oven"/>
       <img className="checkout-bubble" src={bubble} alt="bubble"/>
