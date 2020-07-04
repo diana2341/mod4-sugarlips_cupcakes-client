@@ -23,6 +23,7 @@ To Start Server:
 To Visit App:
 
 `localhost:3000/`
+
 To run this project also clone down the backend rails API =>[sugarlips_cupcakes-server](https://github.com/diana2341/mod4-sugarlips_cupcakes-server) and run rails s-p4000
 
 This was a 1 week long project built during my fourth module at Flatiron School . In this application for the front end , I used React.js  and pure CSS was used for the frontend and Rails API with postgres was used for the [Backend](https://github.com/diana2341/mod4-sugarlips_cupcakes-server)
